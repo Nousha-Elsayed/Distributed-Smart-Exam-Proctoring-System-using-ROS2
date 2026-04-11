@@ -24,6 +24,10 @@ setup(
     },
     entry_points={
         'console_scripts': [
+            'camera_streamer    = exam_proctoring_pkg.camera_streamer:main',
+            'face_detector      = exam_proctoring_pkg.face_detector:main',
+            'depth_estimator    = exam_proctoring_pkg.depth_estimator:main',
+
         ],
     },
 )
