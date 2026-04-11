@@ -27,6 +27,7 @@ setup(
             'camera_streamer    = exam_proctoring_pkg.camera_streamer:main',
             'face_detector      = exam_proctoring_pkg.face_detector:main',
             'depth_estimator    = exam_proctoring_pkg.depth_estimator:main',
+            'behavior_node = exam_proctoring_pkg.behavior_node:main',
 
         ],
     },
