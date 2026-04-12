@@ -1,0 +1,28 @@
+// generated from rosidl_adapter/resource/action.idl.em
+// with input from exam_proctoring_interfaces/action/Alert.action
+// generated code does not contain a copyright notice
+
+
+module exam_proctoring_interfaces {
+  module action {
+    @verbatim (language="comment", text=
+      "Goal")
+    struct Alert_Goal {
+      int32 alert_level;
+
+      string message;
+    };
+    @verbatim (language="comment", text=
+      "Result")
+    struct Alert_Result {
+      boolean success;
+
+      string response;
+    };
+    @verbatim (language="comment", text=
+      "Feedback")
+    struct Alert_Feedback {
+      string status;
+    };
+  };
+};

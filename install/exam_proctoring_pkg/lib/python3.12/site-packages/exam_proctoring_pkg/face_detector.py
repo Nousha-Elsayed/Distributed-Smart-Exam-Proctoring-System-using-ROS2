@@ -17,7 +17,7 @@ class FaceDetectionNode(Node):
         self.scale_factor = self.get_parameter('scale_factor').value
         self.min_neighbors = self.get_parameter('min_neighbors').value
 
-        # Haar Cascade - better eye detector
+        # Haar Cascades
         self.face_cascade = cv2.CascadeClassifier(
             cv2.data.haarcascades + 'haarcascade_frontalface_default.xml'
         )
@@ -28,7 +28,7 @@ class FaceDetectionNode(Node):
         self.bridge = CvBridge()
 
         # Subscriber
-        self.subscription = self.create_subscription(
+        self.create_subscription(
             Image,
             '/camera_frames',
             self.image_callback,
@@ -38,29 +38,22 @@ class FaceDetectionNode(Node):
         # Publisher
         self.publisher = self.create_publisher(String, '/face_data', 10)
 
-        self.get_logger().info('Face Detection Node Started ✅')
+        self.get_logger().info('Face Detection Node Started')
 
     def is_looking_at_camera(self, gray_face, face_w, face_h):
-        """
-        More forgiving eye detection:
-        - Uses equalizeHist to improve contrast
-        - Checks upper 65% of face (not 60%)
-        - minNeighbors=1 → more sensitive
-        """
-        # Improve contrast → helps in laptop camera lighting
+        # Improve contrast
         gray_face = cv2.equalizeHist(gray_face)
 
         eyes = self.eye_cascade.detectMultiScale(
             gray_face,
             scaleFactor=1.1,
-            minNeighbors=1,   # more sensitive than before
+            minNeighbors=1,
             minSize=(int(face_w * 0.1), int(face_h * 0.1))
         )
 
         if len(eyes) == 0:
             return False
 
-        # Check eyes are in upper 65% of face
         for (ex, ey, ew, eh) in eyes:
             if ey < face_h * 0.65:
                 return True
@@ -68,12 +61,10 @@ class FaceDetectionNode(Node):
         return False
 
     def image_callback(self, msg):
-        # Convert ROS Image → OpenCV
         frame = self.bridge.imgmsg_to_cv2(msg, desired_encoding='bgr8')
         gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
         h, w = gray.shape
 
-        # Detect faces
         faces = self.face_cascade.detectMultiScale(
             gray,
             scaleFactor=self.scale_factor,
@@ -87,26 +78,24 @@ class FaceDetectionNode(Node):
             face_gray = gray[y:y+fh, x:x+fw]
             face_color = display_frame[y:y+fh, x:x+fw]
 
-            # Check looking
+            # Looking detection
             looking = self.is_looking_at_camera(face_gray, fw, fh)
 
-            # Check centered
+            # Center check
             face_center_x = x + fw // 2
             in_center = (w * 0.25) < face_center_x < (w * 0.75)
 
-            # ── Draw on frame ──────────────────────────
-            # Box color: green = looking, red = not looking
+            # Draw rectangle
             box_color = (0, 255, 0) if looking else (0, 0, 255)
             cv2.rectangle(display_frame, (x, y), (x+fw, y+fh), box_color, 2)
 
-            # Label
-            label = 'Looking ' if looking else 'Not Looking '
+            label = 'Looking' if looking else 'Not Looking'
             cv2.putText(display_frame, label,
                         (x, y - 10),
                         cv2.FONT_HERSHEY_SIMPLEX, 0.7,
                         box_color, 2)
 
-            # Draw eyes inside face
+            # Draw eyes
             eyes = self.eye_cascade.detectMultiScale(
                 cv2.equalizeHist(face_gray),
                 scaleFactor=1.1,
@@ -116,31 +105,28 @@ class FaceDetectionNode(Node):
                 cv2.rectangle(face_color,
                               (ex, ey), (ex+ew, ey+eh),
                               (255, 255, 0), 1)
-            # ───────────────────────────────────────────
 
+            #   BBOX 
             face_list.append({
                 'x1': int(x),
                 'y1': int(y),
-                'x2': int(fw),
-                'y2': int(fh),
+                'x2': int(x + fw),   # FIXED
+                'y2': int(y + fh),   # FIXED
                 'is_looking': looking,
                 'in_center': bool(in_center)
             })
 
-        # Status text on top of frame
         any_looking = any(f['is_looking'] for f in face_list)
+
         status = f'Faces: {len(face_list)} | Looking: {any_looking}'
         cv2.putText(display_frame, status,
                     (10, 30),
                     cv2.FONT_HERSHEY_SIMPLEX, 0.8,
                     (255, 255, 255), 2)
 
-        # ── Show window ────────────────────────────────
         cv2.imshow('Face Detection Node', display_frame)
         cv2.waitKey(1)
-        # ───────────────────────────────────────────────
 
-        # Publish
         result = {
             'face_count': len(face_list),
             'face_detected': len(face_list) > 0,
@@ -162,9 +148,15 @@ class FaceDetectionNode(Node):
 def main(args=None):
     rclpy.init(args=args)
     node = FaceDetectionNode()
-    rclpy.spin(node)
-    node.destroy_node()
-    rclpy.shutdown()
+
+    try:
+        rclpy.spin(node)
+    except KeyboardInterrupt:
+        pass
+    finally:
+        node.destroy_node()
+        rclpy.shutdown()
+
 
 if __name__ == '__main__':
     main()

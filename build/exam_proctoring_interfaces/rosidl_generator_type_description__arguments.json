@@ -1,0 +1,13 @@
+{
+  "package_name": "exam_proctoring_interfaces",
+  "output_dir": "/home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/build/exam_proctoring_interfaces/rosidl_generator_type_description/exam_proctoring_interfaces",
+  "idl_tuples": [
+    "/home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/build/exam_proctoring_interfaces/rosidl_adapter/exam_proctoring_interfaces:action/Alert.idl"
+  ],
+  "include_paths": [
+    "builtin_interfaces:/opt/ros/jazzy/share/builtin_interfaces",
+    "service_msgs:/opt/ros/jazzy/share/service_msgs",
+    "action_msgs:/opt/ros/jazzy/share/action_msgs",
+    "unique_identifier_msgs:/opt/ros/jazzy/share/unique_identifier_msgs"
+  ]
+}

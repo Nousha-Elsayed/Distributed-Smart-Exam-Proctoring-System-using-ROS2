@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "exam_proctoring_interfaces__py",
+		"source" : "/home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/build/exam_proctoring_interfaces/exam_proctoring_interfaces__py"
+	}
+}

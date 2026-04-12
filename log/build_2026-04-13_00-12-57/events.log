@@ -1,0 +1,660 @@
+[0.000000] (-) TimerEvent: {}
+[0.001361] (exam_proctoring_interfaces) JobQueued: {'identifier': 'exam_proctoring_interfaces', 'dependencies': OrderedDict()}
+[0.001524] (exam_proctoring_pkg) JobQueued: {'identifier': 'exam_proctoring_pkg', 'dependencies': OrderedDict()}
+[0.001599] (exam_proctoring_interfaces) JobStarted: {'identifier': 'exam_proctoring_interfaces'}
+[0.046974] (exam_proctoring_pkg) JobStarted: {'identifier': 'exam_proctoring_pkg'}
+[0.072645] (exam_proctoring_interfaces) JobProgress: {'identifier': 'exam_proctoring_interfaces', 'progress': 'cmake'}
+[0.073591] (exam_proctoring_interfaces) Command: {'cmd': ['/usr/bin/cmake', '/home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/src/exam_proctoring_interfaces', '-DCMAKE_INSTALL_PREFIX=/home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces'], 'cwd': '/home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/build/exam_proctoring_interfaces', 'env': OrderedDict({'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'XDG_ACTIVATION_TOKEN': 'gnome-shell/Terminator/2702-2-menna-ThinkPad-P50_TIME134378', 'USER': 'menna', 'LC_TIME': 'ar_EG.UTF-8', 'XDG_SESSION_TYPE': 'x11', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/menna', 'DESKTOP_SESSION': 'ubuntu', 'GIO_LAUNCHED_DESKTOP_FILE': '/usr/share/applications/terminator.desktop', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'PS1': '${debian_chroot:+($debian_chroot)}\\[\\033[01;32m\\]\\u@\\h\\[\\033[00m\\]:\\[\\033[01;34m\\]\\w\\[\\033[00m\\]\\$', 'LC_MONETARY': 'ar_EG.UTF-8', 'MANAGERPID': '2199', 'SYSTEMD_EXEC_PID': '2702', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'TERMINATOR_DBUS_NAME': 'net.tenshu.Terminator23558193cd9818af7fe4d2c2f5bd9d00f', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '3664', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'COLCON_PREFIX_PATH': '/home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'menna', 'JOURNAL_STREAM': '8:18084', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@x11.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'menna', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'WINDOWPATH': '2', 'PATH': '/opt/ros/jazzy/bin:/usr/lib/ccache:/home/menna/ardupilot/Tools/autotest:/opt/gcc-arm-none-eabi-10-2020-q4-major/bin:/home/menna/venv-ardupilot/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/menna-ThinkPad-P50:@/tmp/.ICE-unix/2663,unix/menna-ThinkPad-P50:/tmp/.ICE-unix/2663', 'INVOCATION_ID': 'e5f594bf81c24e7092cb8ea41cd1efa8', 'GTK3_MODULES': 'xapp-gtk3-module', 'XDG_MENU_PREFIX': 'gnome-', 'LC_ADDRESS': 'ar_EG.UTF-8', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':1', 'TERMINATOR_DBUS_PATH': '/net/tenshu/Terminator2', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'LC_TELEPHONE': 'ar_EG.UTF-8', 'VIRTUAL_ENV_PROMPT': '(venv-ardupilot)', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_pkg:/home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LC_NAME': 'ar_EG.UTF-8', 'TERMINATOR_UUID': 'urn:uuid:684d1524-aab0-4cdf-9458-d06a665c7183', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LC_MEASUREMENT': 'ar_EG.UTF-8', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'GJS_DEBUG_OUTPUT': 'stderr', 'LC_IDENTIFICATION': 'ar_EG.UTF-8', 'VIRTUAL_ENV': '/home/menna/venv-ardupilot', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/build/exam_proctoring_interfaces', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_pkg/lib/python3.12/site-packages:/home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages:/home/menna/Depth-Anything-V2', 'LC_NUMERIC': 'ar_EG.UTF-8', 'LC_PAPER': 'ar_EG.UTF-8', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_pkg:/opt/ros/jazzy'}), 'shell': False}
+[0.101212] (-) TimerEvent: {}
+[0.204388] (-) TimerEvent: {}
+[0.290857] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- The C compiler identification is GNU 13.3.0\n'}
+[0.304425] (-) TimerEvent: {}
+[0.404756] (-) TimerEvent: {}
+[0.505226] (-) TimerEvent: {}
+[0.561291] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 13.3.0\n'}
+[0.605755] (-) TimerEvent: {}
+[0.680262] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.707408] (-) TimerEvent: {}
+[0.810089] (-) TimerEvent: {}
+[0.912241] (-) TimerEvent: {}
+[1.012665] (-) TimerEvent: {}
+[1.027782] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[1.062905] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Check for working C compiler: /usr/lib/ccache/cc - skipped\n'}
+[1.064544] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[1.069441] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[1.112784] (-) TimerEvent: {}
+[1.147250] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[1.212998] (-) TimerEvent: {}
+[1.313756] (-) TimerEvent: {}
+[1.416819] (-) TimerEvent: {}
+[1.520207] (-) TimerEvent: {}
+[1.571286] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[1.624198] (-) TimerEvent: {}
+[1.685068] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/lib/ccache/c++ - skipped\n'}
+[1.685442] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[1.686511] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[1.698939] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.5 (/opt/ros/jazzy/share/ament_cmake/cmake)\n'}
+[1.724297] (-) TimerEvent: {}
+[1.824657] (-) TimerEvent: {}
+[1.925070] (-) TimerEvent: {}
+[2.028417] (-) TimerEvent: {}
+[2.128871] (-) TimerEvent: {}
+[2.229218] (-) TimerEvent: {}
+[2.334079] (-) TimerEvent: {}
+[2.457849] (-) TimerEvent: {}
+[2.561027] (-) TimerEvent: {}
+[2.663205] (-) TimerEvent: {}
+[2.714939] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Found Python3: /home/menna/venv-ardupilot/bin/python3 (found version "3.12.3") found components: Interpreter \n'}
+[2.766865] (-) TimerEvent: {}
+[2.867326] (-) TimerEvent: {}
+[2.967742] (-) TimerEvent: {}
+[3.067843] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.6.0 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)\n'}
+[3.068184] (-) TimerEvent: {}
+[3.093209] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[3.168365] (-) TimerEvent: {}
+[3.274199] (-) TimerEvent: {}
+[3.294253] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[3.377222] (-) TimerEvent: {}
+[3.477700] (-) TimerEvent: {}
+[3.506782] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Found rosidl_adapter: 4.6.7 (/opt/ros/jazzy/share/rosidl_adapter/cmake)\n'}
+[3.577816] (-) TimerEvent: {}
+[3.678460] (-) TimerEvent: {}
+[3.779305] (-) TimerEvent: {}
+[3.882658] (-) TimerEvent: {}
+[3.984245] (-) TimerEvent: {}
+[4.086241] (-) TimerEvent: {}
+[4.189228] (-) TimerEvent: {}
+[4.217499] (exam_proctoring_pkg) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/exam_proctoring_pkg', 'build', '--build-base', '/home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/build/exam_proctoring_pkg/build', 'install', '--record', '/home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/build/exam_proctoring_pkg/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/src/exam_proctoring_pkg', 'env': {'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'XDG_ACTIVATION_TOKEN': 'gnome-shell/Terminator/2702-2-menna-ThinkPad-P50_TIME134378', 'USER': 'menna', 'LC_TIME': 'ar_EG.UTF-8', 'XDG_SESSION_TYPE': 'x11', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/menna', 'DESKTOP_SESSION': 'ubuntu', 'GIO_LAUNCHED_DESKTOP_FILE': '/usr/share/applications/terminator.desktop', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'PS1': '${debian_chroot:+($debian_chroot)}\\[\\033[01;32m\\]\\u@\\h\\[\\033[00m\\]:\\[\\033[01;34m\\]\\w\\[\\033[00m\\]\\$', 'LC_MONETARY': 'ar_EG.UTF-8', 'MANAGERPID': '2199', 'SYSTEMD_EXEC_PID': '2702', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'TERMINATOR_DBUS_NAME': 'net.tenshu.Terminator23558193cd9818af7fe4d2c2f5bd9d00f', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '3664', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'COLCON_PREFIX_PATH': '/home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'menna', 'JOURNAL_STREAM': '8:18084', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@x11.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'menna', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'WINDOWPATH': '2', 'PATH': '/opt/ros/jazzy/bin:/usr/lib/ccache:/home/menna/ardupilot/Tools/autotest:/opt/gcc-arm-none-eabi-10-2020-q4-major/bin:/home/menna/venv-ardupilot/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/menna-ThinkPad-P50:@/tmp/.ICE-unix/2663,unix/menna-ThinkPad-P50:/tmp/.ICE-unix/2663', 'INVOCATION_ID': 'e5f594bf81c24e7092cb8ea41cd1efa8', 'GTK3_MODULES': 'xapp-gtk3-module', 'XDG_MENU_PREFIX': 'gnome-', 'LC_ADDRESS': 'ar_EG.UTF-8', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':1', 'TERMINATOR_DBUS_PATH': '/net/tenshu/Terminator2', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'LC_TELEPHONE': 'ar_EG.UTF-8', 'VIRTUAL_ENV_PROMPT': '(venv-ardupilot)', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_pkg:/home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LC_NAME': 'ar_EG.UTF-8', 'TERMINATOR_UUID': 'urn:uuid:684d1524-aab0-4cdf-9458-d06a665c7183', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LC_MEASUREMENT': 'ar_EG.UTF-8', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'GJS_DEBUG_OUTPUT': 'stderr', 'LC_IDENTIFICATION': 'ar_EG.UTF-8', 'VIRTUAL_ENV': '/home/menna/venv-ardupilot', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/build/exam_proctoring_pkg', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/build/exam_proctoring_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_pkg/lib/python3.12/site-packages:/home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_pkg/lib/python3.12/site-packages:/home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages:/home/menna/Depth-Anything-V2', 'LC_NUMERIC': 'ar_EG.UTF-8', 'LC_PAPER': 'ar_EG.UTF-8', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor'}, 'shell': False}
+[4.293209] (-) TimerEvent: {}
+[4.393672] (-) TimerEvent: {}
+[4.495237] (-) TimerEvent: {}
+[4.597575] (-) TimerEvent: {}
+[4.698396] (-) TimerEvent: {}
+[4.800445] (-) TimerEvent: {}
+[4.903422] (-) TimerEvent: {}
+[5.004692] (-) TimerEvent: {}
+[5.105109] (-) TimerEvent: {}
+[5.205947] (-) TimerEvent: {}
+[5.306388] (-) TimerEvent: {}
+[5.354159] (exam_proctoring_pkg) StdoutLine: {'line': b'running egg_info\n'}
+[5.355380] (exam_proctoring_pkg) StdoutLine: {'line': b'creating ../../build/exam_proctoring_pkg/exam_proctoring_pkg.egg-info\n'}
+[5.407533] (-) TimerEvent: {}
+[5.450752] (exam_proctoring_pkg) StdoutLine: {'line': b'writing ../../build/exam_proctoring_pkg/exam_proctoring_pkg.egg-info/PKG-INFO\n'}
+[5.452108] (exam_proctoring_pkg) StdoutLine: {'line': b'writing dependency_links to ../../build/exam_proctoring_pkg/exam_proctoring_pkg.egg-info/dependency_links.txt\n'}
+[5.452469] (exam_proctoring_pkg) StdoutLine: {'line': b'writing entry points to ../../build/exam_proctoring_pkg/exam_proctoring_pkg.egg-info/entry_points.txt\n'}
+[5.455040] (exam_proctoring_pkg) StdoutLine: {'line': b'writing requirements to ../../build/exam_proctoring_pkg/exam_proctoring_pkg.egg-info/requires.txt\n'}
+[5.455433] (exam_proctoring_pkg) StdoutLine: {'line': b'writing top-level names to ../../build/exam_proctoring_pkg/exam_proctoring_pkg.egg-info/top_level.txt\n'}
+[5.455654] (exam_proctoring_pkg) StdoutLine: {'line': b"writing manifest file '../../build/exam_proctoring_pkg/exam_proctoring_pkg.egg-info/SOURCES.txt'\n"}
+[5.519169] (-) TimerEvent: {}
+[5.621205] (-) TimerEvent: {}
+[5.656644] (exam_proctoring_pkg) StdoutLine: {'line': b"reading manifest file '../../build/exam_proctoring_pkg/exam_proctoring_pkg.egg-info/SOURCES.txt'\n"}
+[5.657815] (exam_proctoring_pkg) StdoutLine: {'line': b"writing manifest file '../../build/exam_proctoring_pkg/exam_proctoring_pkg.egg-info/SOURCES.txt'\n"}
+[5.658107] (exam_proctoring_pkg) StdoutLine: {'line': b'running build\n'}
+[5.658477] (exam_proctoring_pkg) StdoutLine: {'line': b'running build_py\n'}
+[5.659163] (exam_proctoring_pkg) StdoutLine: {'line': b'creating /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/build/exam_proctoring_pkg/build\n'}
+[5.660922] (exam_proctoring_pkg) StdoutLine: {'line': b'creating /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/build/exam_proctoring_pkg/build/lib\n'}
+[5.661246] (exam_proctoring_pkg) StdoutLine: {'line': b'creating /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/build/exam_proctoring_pkg/build/lib/exam_proctoring_pkg\n'}
+[5.664498] (exam_proctoring_pkg) StdoutLine: {'line': b'copying exam_proctoring_pkg/depth_estimator.py -> /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/build/exam_proctoring_pkg/build/lib/exam_proctoring_pkg\n'}
+[5.664786] (exam_proctoring_pkg) StdoutLine: {'line': b'copying exam_proctoring_pkg/__init__.py -> /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/build/exam_proctoring_pkg/build/lib/exam_proctoring_pkg\n'}
+[5.664982] (exam_proctoring_pkg) StdoutLine: {'line': b'copying exam_proctoring_pkg/rule_node.py -> /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/build/exam_proctoring_pkg/build/lib/exam_proctoring_pkg\n'}
+[5.670219] (exam_proctoring_pkg) StdoutLine: {'line': b'copying exam_proctoring_pkg/face_detector.py -> /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/build/exam_proctoring_pkg/build/lib/exam_proctoring_pkg\n'}
+[5.670710] (exam_proctoring_pkg) StdoutLine: {'line': b'copying exam_proctoring_pkg/behavior_node.py -> /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/build/exam_proctoring_pkg/build/lib/exam_proctoring_pkg\n'}
+[5.671023] (exam_proctoring_pkg) StdoutLine: {'line': b'copying exam_proctoring_pkg/camera_streamer.py -> /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/build/exam_proctoring_pkg/build/lib/exam_proctoring_pkg\n'}
+[5.671354] (exam_proctoring_pkg) StdoutLine: {'line': b'copying exam_proctoring_pkg/alert_action.py -> /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/build/exam_proctoring_pkg/build/lib/exam_proctoring_pkg\n'}
+[5.671674] (exam_proctoring_pkg) StdoutLine: {'line': b'running install\n'}
+[5.691177] (exam_proctoring_pkg) StdoutLine: {'line': b'running install_lib\n'}
+[5.725493] (-) TimerEvent: {}
+[5.789614] (exam_proctoring_pkg) StdoutLine: {'line': b'creating /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_pkg/lib/python3.12/site-packages/exam_proctoring_pkg\n'}
+[5.790175] (exam_proctoring_pkg) StdoutLine: {'line': b'copying /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/build/exam_proctoring_pkg/build/lib/exam_proctoring_pkg/depth_estimator.py -> /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_pkg/lib/python3.12/site-packages/exam_proctoring_pkg\n'}
+[5.790642] (exam_proctoring_pkg) StdoutLine: {'line': b'copying /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/build/exam_proctoring_pkg/build/lib/exam_proctoring_pkg/__init__.py -> /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_pkg/lib/python3.12/site-packages/exam_proctoring_pkg\n'}
+[5.790987] (exam_proctoring_pkg) StdoutLine: {'line': b'copying /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/build/exam_proctoring_pkg/build/lib/exam_proctoring_pkg/rule_node.py -> /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_pkg/lib/python3.12/site-packages/exam_proctoring_pkg\n'}
+[5.791328] (exam_proctoring_pkg) StdoutLine: {'line': b'copying /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/build/exam_proctoring_pkg/build/lib/exam_proctoring_pkg/face_detector.py -> /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_pkg/lib/python3.12/site-packages/exam_proctoring_pkg\n'}
+[5.792206] (exam_proctoring_pkg) StdoutLine: {'line': b'copying /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/build/exam_proctoring_pkg/build/lib/exam_proctoring_pkg/behavior_node.py -> /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_pkg/lib/python3.12/site-packages/exam_proctoring_pkg\n'}
+[5.796182] (exam_proctoring_pkg) StdoutLine: {'line': b'copying /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/build/exam_proctoring_pkg/build/lib/exam_proctoring_pkg/camera_streamer.py -> /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_pkg/lib/python3.12/site-packages/exam_proctoring_pkg\n'}
+[5.796694] (exam_proctoring_pkg) StdoutLine: {'line': b'copying /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/build/exam_proctoring_pkg/build/lib/exam_proctoring_pkg/alert_action.py -> /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_pkg/lib/python3.12/site-packages/exam_proctoring_pkg\n'}
+[5.796961] (exam_proctoring_pkg) StdoutLine: {'line': b'byte-compiling /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_pkg/lib/python3.12/site-packages/exam_proctoring_pkg/depth_estimator.py to depth_estimator.cpython-312.pyc\n'}
+[5.798639] (exam_proctoring_pkg) StdoutLine: {'line': b'byte-compiling /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_pkg/lib/python3.12/site-packages/exam_proctoring_pkg/__init__.py to __init__.cpython-312.pyc\n'}
+[5.799215] (exam_proctoring_pkg) StdoutLine: {'line': b'byte-compiling /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_pkg/lib/python3.12/site-packages/exam_proctoring_pkg/rule_node.py to rule_node.cpython-312.pyc\n'}
+[5.803249] (exam_proctoring_pkg) StdoutLine: {'line': b'byte-compiling /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_pkg/lib/python3.12/site-packages/exam_proctoring_pkg/face_detector.py to face_detector.cpython-312.pyc\n'}
+[5.810286] (exam_proctoring_pkg) StdoutLine: {'line': b'byte-compiling /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_pkg/lib/python3.12/site-packages/exam_proctoring_pkg/behavior_node.py to behavior_node.cpython-312.pyc\n'}
+[5.814741] (exam_proctoring_pkg) StdoutLine: {'line': b'byte-compiling /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_pkg/lib/python3.12/site-packages/exam_proctoring_pkg/camera_streamer.py to camera_streamer.cpython-312.pyc\n'}
+[5.816639] (exam_proctoring_pkg) StdoutLine: {'line': b'byte-compiling /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_pkg/lib/python3.12/site-packages/exam_proctoring_pkg/alert_action.py to alert_action.cpython-312.pyc\n'}
+[5.818531] (exam_proctoring_pkg) StdoutLine: {'line': b'running install_data\n'}
+[5.818862] (exam_proctoring_pkg) StdoutLine: {'line': b'creating /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_pkg/share/ament_index\n'}
+[5.820082] (exam_proctoring_pkg) StdoutLine: {'line': b'creating /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_pkg/share/ament_index/resource_index\n'}
+[5.820443] (exam_proctoring_pkg) StdoutLine: {'line': b'creating /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_pkg/share/ament_index/resource_index/packages\n'}
+[5.820617] (exam_proctoring_pkg) StdoutLine: {'line': b'copying resource/exam_proctoring_pkg -> /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_pkg/share/ament_index/resource_index/packages\n'}
+[5.820784] (exam_proctoring_pkg) StdoutLine: {'line': b'copying package.xml -> /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_pkg/share/exam_proctoring_pkg\n'}
+[5.820959] (exam_proctoring_pkg) StdoutLine: {'line': b'running install_egg_info\n'}
+[5.826181] (-) TimerEvent: {}
+[5.921346] (exam_proctoring_pkg) StdoutLine: {'line': b'Copying ../../build/exam_proctoring_pkg/exam_proctoring_pkg.egg-info to /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_pkg/lib/python3.12/site-packages/exam_proctoring_pkg-0.0.0-py3.12.egg-info\n'}
+[5.927215] (exam_proctoring_pkg) StdoutLine: {'line': b'running install_scripts\n'}
+[5.927536] (-) TimerEvent: {}
+[6.027866] (-) TimerEvent: {}
+[6.129723] (-) TimerEvent: {}
+[6.231316] (-) TimerEvent: {}
+[6.333207] (-) TimerEvent: {}
+[6.433637] (-) TimerEvent: {}
+[6.489780] (exam_proctoring_pkg) StdoutLine: {'line': b'Installing alert_action script to /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_pkg/lib/exam_proctoring_pkg\n'}
+[6.490122] (exam_proctoring_pkg) StdoutLine: {'line': b'Installing behavior_node script to /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_pkg/lib/exam_proctoring_pkg\n'}
+[6.492040] (exam_proctoring_pkg) StdoutLine: {'line': b'Installing camera_streamer script to /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_pkg/lib/exam_proctoring_pkg\n'}
+[6.493858] (exam_proctoring_pkg) StdoutLine: {'line': b'Installing depth_estimator script to /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_pkg/lib/exam_proctoring_pkg\n'}
+[6.494048] (exam_proctoring_pkg) StdoutLine: {'line': b'Installing face_detector script to /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_pkg/lib/exam_proctoring_pkg\n'}
+[6.494909] (exam_proctoring_pkg) StdoutLine: {'line': b'Installing rule_node script to /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_pkg/lib/exam_proctoring_pkg\n'}
+[6.495096] (exam_proctoring_pkg) StdoutLine: {'line': b"writing list of installed files to '/home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/build/exam_proctoring_pkg/install.log'\n"}
+[6.534530] (-) TimerEvent: {}
+[6.596284] (exam_proctoring_pkg) CommandEnded: {'returncode': 0}
+[6.630502] (exam_proctoring_pkg) JobEnded: {'identifier': 'exam_proctoring_pkg', 'rc': 0}
+[6.634676] (-) TimerEvent: {}
+[6.741194] (-) TimerEvent: {}
+[6.783404] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.12.0 (/opt/ros/jazzy/share/ament_cmake_ros/cmake)\n'}
+[6.841314] (-) TimerEvent: {}
+[6.941718] (-) TimerEvent: {}
+[7.042142] (-) TimerEvent: {}
+[7.144316] (-) TimerEvent: {}
+[7.244702] (-) TimerEvent: {}
+[7.346566] (-) TimerEvent: {}
+[7.447002] (-) TimerEvent: {}
+[7.548305] (-) TimerEvent: {}
+[7.650256] (-) TimerEvent: {}
+[7.750714] (-) TimerEvent: {}
+[7.852875] (-) TimerEvent: {}
+[7.954649] (-) TimerEvent: {}
+[8.055041] (-) TimerEvent: {}
+[8.168212] (-) TimerEvent: {}
+[8.268619] (-) TimerEvent: {}
+[8.368991] (-) TimerEvent: {}
+[8.469430] (-) TimerEvent: {}
+[8.571396] (-) TimerEvent: {}
+[8.674034] (-) TimerEvent: {}
+[8.773230] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[8.774118] (-) TimerEvent: {}
+[8.881494] (-) TimerEvent: {}
+[8.981921] (-) TimerEvent: {}
+[9.082366] (-) TimerEvent: {}
+[9.182962] (-) TimerEvent: {}
+[9.285253] (-) TimerEvent: {}
+[9.386332] (-) TimerEvent: {}
+[9.486725] (-) TimerEvent: {}
+[9.589406] (-) TimerEvent: {}
+[9.689766] (-) TimerEvent: {}
+[9.790104] (-) TimerEvent: {}
+[9.890492] (-) TimerEvent: {}
+[9.990860] (-) TimerEvent: {}
+[10.091286] (-) TimerEvent: {}
+[10.191880] (-) TimerEvent: {}
+[10.294607] (-) TimerEvent: {}
+[10.397201] (-) TimerEvent: {}
+[10.497587] (-) TimerEvent: {}
+[10.597943] (-) TimerEvent: {}
+[10.698377] (-) TimerEvent: {}
+[10.798761] (-) TimerEvent: {}
+[10.899195] (-) TimerEvent: {}
+[11.001512] (-) TimerEvent: {}
+[11.101979] (-) TimerEvent: {}
+[11.203350] (-) TimerEvent: {}
+[11.216041] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[11.224579] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Found python_cmake_module: 0.11.1 (/opt/ros/jazzy/share/python_cmake_module/cmake)\n'}
+[11.306203] (-) TimerEvent: {}
+[11.406557] (-) TimerEvent: {}
+[11.507170] (-) TimerEvent: {}
+[11.608959] (-) TimerEvent: {}
+[11.709721] (-) TimerEvent: {}
+[11.811748] (-) TimerEvent: {}
+[11.908817] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Found PythonExtra: /home/menna/venv-ardupilot/bin/python3  \n'}
+[11.911913] (-) TimerEvent: {}
+[12.012270] (-) TimerEvent: {}
+[12.115563] (-) TimerEvent: {}
+[12.216055] (-) TimerEvent: {}
+[12.316650] (-) TimerEvent: {}
+[12.417076] (-) TimerEvent: {}
+[12.517570] (-) TimerEvent: {}
+[12.621901] (-) TimerEvent: {}
+[12.724577] (-) TimerEvent: {}
+[12.827160] (-) TimerEvent: {}
+[12.934180] (-) TimerEvent: {}
+[13.036997] (-) TimerEvent: {}
+[13.137498] (-) TimerEvent: {}
+[13.239591] (-) TimerEvent: {}
+[13.344220] (-) TimerEvent: {}
+[13.447219] (-) TimerEvent: {}
+[13.547707] (-) TimerEvent: {}
+[13.648179] (-) TimerEvent: {}
+[13.748659] (-) TimerEvent: {}
+[13.849026] (-) TimerEvent: {}
+[13.949563] (-) TimerEvent: {}
+[13.982295] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Found Python3: /home/menna/venv-ardupilot/bin/python3 (found version "3.12.3") found components: Interpreter Development NumPy Development.Module Development.Embed \n'}
+[14.049656] (-) TimerEvent: {}
+[14.144319] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Configuring done (14.0s)\n'}
+[14.149820] (-) TimerEvent: {}
+[14.250290] (-) TimerEvent: {}
+[14.257764] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Generating done (0.1s)\n'}
+[14.302290] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Build files have been written to: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/build/exam_proctoring_interfaces\n'}
+[14.329561] (exam_proctoring_interfaces) CommandEnded: {'returncode': 0}
+[14.330498] (exam_proctoring_interfaces) JobProgress: {'identifier': 'exam_proctoring_interfaces', 'progress': 'build'}
+[14.330566] (exam_proctoring_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/build/exam_proctoring_interfaces', '--', '-j8', '-l8'], 'cwd': '/home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/build/exam_proctoring_interfaces', 'env': OrderedDict({'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'XDG_ACTIVATION_TOKEN': 'gnome-shell/Terminator/2702-2-menna-ThinkPad-P50_TIME134378', 'USER': 'menna', 'LC_TIME': 'ar_EG.UTF-8', 'XDG_SESSION_TYPE': 'x11', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/menna', 'DESKTOP_SESSION': 'ubuntu', 'GIO_LAUNCHED_DESKTOP_FILE': '/usr/share/applications/terminator.desktop', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'PS1': '${debian_chroot:+($debian_chroot)}\\[\\033[01;32m\\]\\u@\\h\\[\\033[00m\\]:\\[\\033[01;34m\\]\\w\\[\\033[00m\\]\\$', 'LC_MONETARY': 'ar_EG.UTF-8', 'MANAGERPID': '2199', 'SYSTEMD_EXEC_PID': '2702', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'TERMINATOR_DBUS_NAME': 'net.tenshu.Terminator23558193cd9818af7fe4d2c2f5bd9d00f', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '3664', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'COLCON_PREFIX_PATH': '/home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'menna', 'JOURNAL_STREAM': '8:18084', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@x11.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'menna', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'WINDOWPATH': '2', 'PATH': '/opt/ros/jazzy/bin:/usr/lib/ccache:/home/menna/ardupilot/Tools/autotest:/opt/gcc-arm-none-eabi-10-2020-q4-major/bin:/home/menna/venv-ardupilot/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/menna-ThinkPad-P50:@/tmp/.ICE-unix/2663,unix/menna-ThinkPad-P50:/tmp/.ICE-unix/2663', 'INVOCATION_ID': 'e5f594bf81c24e7092cb8ea41cd1efa8', 'GTK3_MODULES': 'xapp-gtk3-module', 'XDG_MENU_PREFIX': 'gnome-', 'LC_ADDRESS': 'ar_EG.UTF-8', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':1', 'TERMINATOR_DBUS_PATH': '/net/tenshu/Terminator2', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'LC_TELEPHONE': 'ar_EG.UTF-8', 'VIRTUAL_ENV_PROMPT': '(venv-ardupilot)', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_pkg:/home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LC_NAME': 'ar_EG.UTF-8', 'TERMINATOR_UUID': 'urn:uuid:684d1524-aab0-4cdf-9458-d06a665c7183', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LC_MEASUREMENT': 'ar_EG.UTF-8', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'GJS_DEBUG_OUTPUT': 'stderr', 'LC_IDENTIFICATION': 'ar_EG.UTF-8', 'VIRTUAL_ENV': '/home/menna/venv-ardupilot', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/build/exam_proctoring_interfaces', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_pkg/lib/python3.12/site-packages:/home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages:/home/menna/Depth-Anything-V2', 'LC_NUMERIC': 'ar_EG.UTF-8', 'LC_PAPER': 'ar_EG.UTF-8', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_pkg:/opt/ros/jazzy'}), 'shell': False}
+[14.352234] (-) TimerEvent: {}
+[14.454279] (-) TimerEvent: {}
+[14.486626] (exam_proctoring_interfaces) StdoutLine: {'line': b'[  2%] \x1b[34m\x1b[1mGenerating type hashes for ROS interfaces\x1b[0m\n'}
+[14.554382] (-) TimerEvent: {}
+[14.654741] (-) TimerEvent: {}
+[14.755154] (-) TimerEvent: {}
+[14.855622] (-) TimerEvent: {}
+[14.956185] (-) TimerEvent: {}
+[15.060466] (-) TimerEvent: {}
+[15.155330] (exam_proctoring_interfaces) StdoutLine: {'line': b'[  2%] Built target exam_proctoring_interfaces__rosidl_generator_type_description\n'}
+[15.160565] (-) TimerEvent: {}
+[15.260984] (-) TimerEvent: {}
+[15.264887] (exam_proctoring_interfaces) StdoutLine: {'line': b'[  2%] Built target ament_cmake_python_copy_exam_proctoring_interfaces\n'}
+[15.295213] (exam_proctoring_interfaces) StdoutLine: {'line': b'[  5%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[15.361098] (-) TimerEvent: {}
+[15.461581] (-) TimerEvent: {}
+[15.565242] (-) TimerEvent: {}
+[15.665678] (-) TimerEvent: {}
+[15.766193] (-) TimerEvent: {}
+[15.866499] (-) TimerEvent: {}
+[15.966854] (-) TimerEvent: {}
+[16.068201] (-) TimerEvent: {}
+[16.168674] (-) TimerEvent: {}
+[16.275548] (-) TimerEvent: {}
+[16.376037] (-) TimerEvent: {}
+[16.476545] (-) TimerEvent: {}
+[16.577643] (-) TimerEvent: {}
+[16.678067] (-) TimerEvent: {}
+[16.780228] (-) TimerEvent: {}
+[16.880576] (-) TimerEvent: {}
+[16.980990] (-) TimerEvent: {}
+[17.085349] (-) TimerEvent: {}
+[17.187405] (-) TimerEvent: {}
+[17.291227] (-) TimerEvent: {}
+[17.345159] (exam_proctoring_interfaces) StdoutLine: {'line': b'[  8%] \x1b[32mBuilding C object CMakeFiles/exam_proctoring_interfaces__rosidl_generator_c.dir/rosidl_generator_c/exam_proctoring_interfaces/action/detail/alert__description.c.o\x1b[0m\n'}
+[17.391328] (-) TimerEvent: {}
+[17.491695] (-) TimerEvent: {}
+[17.592173] (-) TimerEvent: {}
+[17.693207] (-) TimerEvent: {}
+[17.760493] (exam_proctoring_interfaces) StdoutLine: {'line': b'[ 11%] \x1b[32mBuilding C object CMakeFiles/exam_proctoring_interfaces__rosidl_generator_c.dir/rosidl_generator_c/exam_proctoring_interfaces/action/detail/alert__type_support.c.o\x1b[0m\n'}
+[17.794272] (-) TimerEvent: {}
+[17.897991] (-) TimerEvent: {}
+[18.000341] (-) TimerEvent: {}
+[18.038263] (exam_proctoring_interfaces) StdoutLine: {'line': b'[ 14%] \x1b[32mBuilding C object CMakeFiles/exam_proctoring_interfaces__rosidl_generator_c.dir/rosidl_generator_c/exam_proctoring_interfaces/action/detail/alert__functions.c.o\x1b[0m\n'}
+[18.087631] (exam_proctoring_interfaces) StdoutLine: {'line': b'[ 17%] \x1b[32m\x1b[1mLinking C shared library libexam_proctoring_interfaces__rosidl_generator_c.so\x1b[0m\n'}
+[18.102383] (-) TimerEvent: {}
+[18.213243] (-) TimerEvent: {}
+[18.222207] (exam_proctoring_interfaces) StdoutLine: {'line': b'[ 17%] Built target exam_proctoring_interfaces__rosidl_generator_c\n'}
+[18.313353] (-) TimerEvent: {}
+[18.413723] (-) TimerEvent: {}
+[18.514518] (-) TimerEvent: {}
+[18.616088] (-) TimerEvent: {}
+[18.716672] (-) TimerEvent: {}
+[18.823242] (-) TimerEvent: {}
+[18.923658] (-) TimerEvent: {}
+[19.028236] (-) TimerEvent: {}
+[19.128669] (-) TimerEvent: {}
+[19.229495] (-) TimerEvent: {}
+[19.331194] (-) TimerEvent: {}
+[19.431862] (-) TimerEvent: {}
+[19.532349] (-) TimerEvent: {}
+[19.533009] (exam_proctoring_interfaces) StdoutLine: {'line': b'running egg_info\n'}
+[19.639220] (-) TimerEvent: {}
+[19.643383] (exam_proctoring_interfaces) StdoutLine: {'line': b'creating exam_proctoring_interfaces.egg-info\n'}
+[19.643821] (exam_proctoring_interfaces) StdoutLine: {'line': b'writing exam_proctoring_interfaces.egg-info/PKG-INFO\n'}
+[19.645204] (exam_proctoring_interfaces) StdoutLine: {'line': b'writing dependency_links to exam_proctoring_interfaces.egg-info/dependency_links.txt\n'}
+[19.645517] (exam_proctoring_interfaces) StdoutLine: {'line': b'writing top-level names to exam_proctoring_interfaces.egg-info/top_level.txt\n'}
+[19.645741] (exam_proctoring_interfaces) StdoutLine: {'line': b"writing manifest file 'exam_proctoring_interfaces.egg-info/SOURCES.txt'\n"}
+[19.741284] (-) TimerEvent: {}
+[19.845201] (-) TimerEvent: {}
+[19.945648] (-) TimerEvent: {}
+[19.954242] (exam_proctoring_interfaces) StdoutLine: {'line': b"reading manifest file 'exam_proctoring_interfaces.egg-info/SOURCES.txt'\n"}
+[19.956751] (exam_proctoring_interfaces) StdoutLine: {'line': b"writing manifest file 'exam_proctoring_interfaces.egg-info/SOURCES.txt'\n"}
+[20.045751] (-) TimerEvent: {}
+[20.074809] (exam_proctoring_interfaces) StdoutLine: {'line': b'[ 17%] Built target ament_cmake_python_build_exam_proctoring_interfaces_egg\n'}
+[20.147094] (-) TimerEvent: {}
+[20.153457] (exam_proctoring_interfaces) StdoutLine: {'line': b'[ 20%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[20.251216] (-) TimerEvent: {}
+[20.352967] (-) TimerEvent: {}
+[20.453478] (-) TimerEvent: {}
+[20.558897] (-) TimerEvent: {}
+[20.660699] (-) TimerEvent: {}
+[20.761034] (-) TimerEvent: {}
+[20.861542] (-) TimerEvent: {}
+[20.964752] (-) TimerEvent: {}
+[21.065225] (-) TimerEvent: {}
+[21.165673] (-) TimerEvent: {}
+[21.266124] (-) TimerEvent: {}
+[21.282365] (exam_proctoring_interfaces) StdoutLine: {'line': b'[ 23%] \x1b[32mBuilding CXX object CMakeFiles/exam_proctoring_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/exam_proctoring_interfaces/action/alert__type_support.cpp.o\x1b[0m\n'}
+[21.360218] (exam_proctoring_interfaces) StdoutLine: {'line': b'[ 26%] \x1b[32m\x1b[1mLinking CXX shared library libexam_proctoring_interfaces__rosidl_typesupport_c.so\x1b[0m\n'}
+[21.368363] (-) TimerEvent: {}
+[21.468819] (-) TimerEvent: {}
+[21.490164] (exam_proctoring_interfaces) StdoutLine: {'line': b'[ 26%] Built target exam_proctoring_interfaces__rosidl_typesupport_c\n'}
+[21.512430] (exam_proctoring_interfaces) StdoutLine: {'line': b'[ 29%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[21.569200] (-) TimerEvent: {}
+[21.669748] (-) TimerEvent: {}
+[21.771392] (-) TimerEvent: {}
+[21.871921] (-) TimerEvent: {}
+[21.975029] (-) TimerEvent: {}
+[22.078244] (-) TimerEvent: {}
+[22.183222] (-) TimerEvent: {}
+[22.283886] (-) TimerEvent: {}
+[22.390200] (-) TimerEvent: {}
+[22.490580] (-) TimerEvent: {}
+[22.590980] (-) TimerEvent: {}
+[22.693213] (-) TimerEvent: {}
+[22.793667] (-) TimerEvent: {}
+[22.905768] (-) TimerEvent: {}
+[23.008232] (-) TimerEvent: {}
+[23.109874] (-) TimerEvent: {}
+[23.210402] (-) TimerEvent: {}
+[23.237332] (exam_proctoring_interfaces) StdoutLine: {'line': b'[ 32%] \x1b[32mBuilding C object CMakeFiles/exam_proctoring_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/exam_proctoring_interfaces/action/detail/alert__type_support.c.o\x1b[0m\n'}
+[23.286293] (exam_proctoring_interfaces) StdoutLine: {'line': b'[ 35%] \x1b[32m\x1b[1mLinking C shared library libexam_proctoring_interfaces__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[23.310512] (-) TimerEvent: {}
+[23.415194] (-) TimerEvent: {}
+[23.446438] (exam_proctoring_interfaces) StdoutLine: {'line': b'[ 35%] Built target exam_proctoring_interfaces__rosidl_typesupport_introspection_c\n'}
+[23.481217] (exam_proctoring_interfaces) StdoutLine: {'line': b'[ 38%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[23.515306] (-) TimerEvent: {}
+[23.615752] (-) TimerEvent: {}
+[23.716100] (-) TimerEvent: {}
+[23.816474] (-) TimerEvent: {}
+[23.916786] (-) TimerEvent: {}
+[24.019202] (-) TimerEvent: {}
+[24.119550] (-) TimerEvent: {}
+[24.219931] (-) TimerEvent: {}
+[24.320205] (-) TimerEvent: {}
+[24.420523] (-) TimerEvent: {}
+[24.520882] (-) TimerEvent: {}
+[24.624366] (-) TimerEvent: {}
+[24.724818] (-) TimerEvent: {}
+[24.825186] (-) TimerEvent: {}
+[24.925500] (-) TimerEvent: {}
+[25.025854] (-) TimerEvent: {}
+[25.127716] (-) TimerEvent: {}
+[25.229544] (-) TimerEvent: {}
+[25.329908] (-) TimerEvent: {}
+[25.430205] (-) TimerEvent: {}
+[25.432783] (exam_proctoring_interfaces) StdoutLine: {'line': b'[ 41%] \x1b[32mBuilding CXX object CMakeFiles/exam_proctoring_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/exam_proctoring_interfaces/action/detail/alert__type_support_c.cpp.o\x1b[0m\n'}
+[25.492319] (exam_proctoring_interfaces) StdoutLine: {'line': b'[ 44%] \x1b[32m\x1b[1mLinking CXX shared library libexam_proctoring_interfaces__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[25.530356] (-) TimerEvent: {}
+[25.644327] (-) TimerEvent: {}
+[25.744854] (-) TimerEvent: {}
+[25.794084] (exam_proctoring_interfaces) StdoutLine: {'line': b'[ 44%] Built target exam_proctoring_interfaces__rosidl_typesupport_fastrtps_c\n'}
+[25.845008] (-) TimerEvent: {}
+[25.857710] (exam_proctoring_interfaces) StdoutLine: {'line': b'[ 47%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[25.945109] (-) TimerEvent: {}
+[26.045519] (-) TimerEvent: {}
+[26.147177] (-) TimerEvent: {}
+[26.248749] (-) TimerEvent: {}
+[26.351200] (-) TimerEvent: {}
+[26.452213] (-) TimerEvent: {}
+[26.552666] (-) TimerEvent: {}
+[26.653158] (-) TimerEvent: {}
+[26.755539] (-) TimerEvent: {}
+[26.857197] (-) TimerEvent: {}
+[26.957609] (-) TimerEvent: {}
+[27.058092] (-) TimerEvent: {}
+[27.161312] (-) TimerEvent: {}
+[27.262298] (-) TimerEvent: {}
+[27.337258] (exam_proctoring_interfaces) StdoutLine: {'line': b'[ 47%] Built target exam_proctoring_interfaces__cpp\n'}
+[27.365392] (-) TimerEvent: {}
+[27.369541] (exam_proctoring_interfaces) StdoutLine: {'line': b'[ 50%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[27.465492] (-) TimerEvent: {}
+[27.565880] (-) TimerEvent: {}
+[27.666330] (-) TimerEvent: {}
+[27.770204] (-) TimerEvent: {}
+[27.873828] (-) TimerEvent: {}
+[27.974278] (-) TimerEvent: {}
+[28.074677] (-) TimerEvent: {}
+[28.175355] (-) TimerEvent: {}
+[28.276097] (-) TimerEvent: {}
+[28.374118] (exam_proctoring_interfaces) StdoutLine: {'line': b'[ 52%] \x1b[32mBuilding CXX object CMakeFiles/exam_proctoring_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/exam_proctoring_interfaces/action/alert__type_support.cpp.o\x1b[0m\n'}
+[28.376848] (-) TimerEvent: {}
+[28.442461] (exam_proctoring_interfaces) StdoutLine: {'line': b'[ 55%] \x1b[32m\x1b[1mLinking CXX shared library libexam_proctoring_interfaces__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[28.477215] (-) TimerEvent: {}
+[28.578311] (-) TimerEvent: {}
+[28.678695] (-) TimerEvent: {}
+[28.701284] (exam_proctoring_interfaces) StdoutLine: {'line': b'[ 55%] Built target exam_proctoring_interfaces__rosidl_typesupport_cpp\n'}
+[28.730326] (exam_proctoring_interfaces) StdoutLine: {'line': b'[ 58%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[28.778806] (-) TimerEvent: {}
+[28.884530] (-) TimerEvent: {}
+[28.984994] (-) TimerEvent: {}
+[29.087212] (-) TimerEvent: {}
+[29.187602] (-) TimerEvent: {}
+[29.287992] (-) TimerEvent: {}
+[29.388329] (-) TimerEvent: {}
+[29.488886] (-) TimerEvent: {}
+[29.589433] (-) TimerEvent: {}
+[29.689847] (-) TimerEvent: {}
+[29.791603] (-) TimerEvent: {}
+[29.825233] (exam_proctoring_interfaces) StdoutLine: {'line': b'[ 61%] \x1b[32mBuilding CXX object CMakeFiles/exam_proctoring_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/exam_proctoring_interfaces/action/detail/alert__type_support.cpp.o\x1b[0m\n'}
+[29.882357] (exam_proctoring_interfaces) StdoutLine: {'line': b'[ 64%] \x1b[32m\x1b[1mLinking CXX shared library libexam_proctoring_interfaces__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[29.891732] (-) TimerEvent: {}
+[29.992254] (-) TimerEvent: {}
+[30.096368] (-) TimerEvent: {}
+[30.136327] (exam_proctoring_interfaces) StdoutLine: {'line': b'[ 64%] Built target exam_proctoring_interfaces__rosidl_typesupport_introspection_cpp\n'}
+[30.174205] (exam_proctoring_interfaces) StdoutLine: {'line': b'[ 67%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[30.201257] (-) TimerEvent: {}
+[30.301798] (-) TimerEvent: {}
+[30.402207] (-) TimerEvent: {}
+[30.502622] (-) TimerEvent: {}
+[30.603006] (-) TimerEvent: {}
+[30.704329] (-) TimerEvent: {}
+[30.804729] (-) TimerEvent: {}
+[30.908365] (-) TimerEvent: {}
+[31.008727] (-) TimerEvent: {}
+[31.109126] (-) TimerEvent: {}
+[31.212202] (-) TimerEvent: {}
+[31.312626] (-) TimerEvent: {}
+[31.413082] (-) TimerEvent: {}
+[31.513626] (-) TimerEvent: {}
+[31.617355] (-) TimerEvent: {}
+[31.717755] (-) TimerEvent: {}
+[31.778509] (exam_proctoring_interfaces) StdoutLine: {'line': b'[ 70%] \x1b[32mBuilding CXX object CMakeFiles/exam_proctoring_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/exam_proctoring_interfaces/action/detail/dds_fastrtps/alert__type_support.cpp.o\x1b[0m\n'}
+[31.817876] (-) TimerEvent: {}
+[31.839710] (exam_proctoring_interfaces) StdoutLine: {'line': b'[ 73%] \x1b[32m\x1b[1mLinking CXX shared library libexam_proctoring_interfaces__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[31.917976] (-) TimerEvent: {}
+[32.018325] (-) TimerEvent: {}
+[32.120841] (exam_proctoring_interfaces) StdoutLine: {'line': b'[ 73%] Built target exam_proctoring_interfaces__rosidl_typesupport_fastrtps_cpp\n'}
+[32.121203] (-) TimerEvent: {}
+[32.198684] (exam_proctoring_interfaces) StdoutLine: {'line': b'[ 73%] Built target exam_proctoring_interfaces\n'}
+[32.221447] (-) TimerEvent: {}
+[32.296760] (exam_proctoring_interfaces) StdoutLine: {'line': b'[ 76%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[32.321548] (-) TimerEvent: {}
+[32.427219] (-) TimerEvent: {}
+[32.527574] (-) TimerEvent: {}
+[32.632583] (-) TimerEvent: {}
+[32.732984] (-) TimerEvent: {}
+[32.833461] (-) TimerEvent: {}
+[32.933914] (-) TimerEvent: {}
+[33.034332] (-) TimerEvent: {}
+[33.134757] (-) TimerEvent: {}
+[33.235234] (-) TimerEvent: {}
+[33.335662] (-) TimerEvent: {}
+[33.436067] (-) TimerEvent: {}
+[33.536439] (-) TimerEvent: {}
+[33.636936] (-) TimerEvent: {}
+[33.738206] (-) TimerEvent: {}
+[33.838596] (-) TimerEvent: {}
+[33.944226] (-) TimerEvent: {}
+[34.044925] (-) TimerEvent: {}
+[34.145374] (-) TimerEvent: {}
+[34.245758] (-) TimerEvent: {}
+[34.346154] (-) TimerEvent: {}
+[34.446854] (-) TimerEvent: {}
+[34.556195] (-) TimerEvent: {}
+[34.656502] (-) TimerEvent: {}
+[34.757047] (-) TimerEvent: {}
+[34.857758] (-) TimerEvent: {}
+[34.958206] (-) TimerEvent: {}
+[35.058626] (-) TimerEvent: {}
+[35.124000] (exam_proctoring_interfaces) StdoutLine: {'line': b'[ 76%] Built target exam_proctoring_interfaces__py\n'}
+[35.162604] (-) TimerEvent: {}
+[35.174378] (exam_proctoring_interfaces) StdoutLine: {'line': b'[ 79%] \x1b[32mBuilding C object CMakeFiles/exam_proctoring_interfaces__rosidl_generator_py.dir/rosidl_generator_py/exam_proctoring_interfaces/action/_alert_s.c.o\x1b[0m\n'}
+[35.236834] (exam_proctoring_interfaces) StdoutLine: {'line': b'[ 82%] \x1b[32m\x1b[1mLinking C shared library libexam_proctoring_interfaces__rosidl_generator_py.so\x1b[0m\n'}
+[35.263950] (-) TimerEvent: {}
+[35.366788] (-) TimerEvent: {}
+[35.404609] (exam_proctoring_interfaces) StdoutLine: {'line': b'[ 82%] Built target exam_proctoring_interfaces__rosidl_generator_py\n'}
+[35.466929] (-) TimerEvent: {}
+[35.470028] (exam_proctoring_interfaces) StdoutLine: {'line': b'[ 85%] \x1b[32mBuilding C object CMakeFiles/exam_proctoring_interfaces_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generator_py/exam_proctoring_interfaces/_exam_proctoring_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[35.544040] (exam_proctoring_interfaces) StdoutLine: {'line': b'[ 88%] \x1b[32m\x1b[1mLinking C shared module rosidl_generator_py/exam_proctoring_interfaces/exam_proctoring_interfaces_s__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[35.569737] (-) TimerEvent: {}
+[35.671617] (-) TimerEvent: {}
+[35.675558] (exam_proctoring_interfaces) StdoutLine: {'line': b'[ 88%] Built target exam_proctoring_interfaces_s__rosidl_typesupport_fastrtps_c\n'}
+[35.735839] (exam_proctoring_interfaces) StdoutLine: {'line': b'[ 91%] \x1b[32mBuilding C object CMakeFiles/exam_proctoring_interfaces_s__rosidl_typesupport_c.dir/rosidl_generator_py/exam_proctoring_interfaces/_exam_proctoring_interfaces_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[35.771751] (-) TimerEvent: {}
+[35.780638] (exam_proctoring_interfaces) StdoutLine: {'line': b'[ 94%] \x1b[32m\x1b[1mLinking C shared module rosidl_generator_py/exam_proctoring_interfaces/exam_proctoring_interfaces_s__rosidl_typesupport_c.so\x1b[0m\n'}
+[35.871861] (-) TimerEvent: {}
+[35.899321] (exam_proctoring_interfaces) StdoutLine: {'line': b'[ 94%] Built target exam_proctoring_interfaces_s__rosidl_typesupport_c\n'}
+[35.959283] (exam_proctoring_interfaces) StdoutLine: {'line': b'[ 97%] \x1b[32mBuilding C object CMakeFiles/exam_proctoring_interfaces_s__rosidl_typesupport_introspection_c.dir/rosidl_generator_py/exam_proctoring_interfaces/_exam_proctoring_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[35.971971] (-) TimerEvent: {}
+[36.010155] (exam_proctoring_interfaces) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared module rosidl_generator_py/exam_proctoring_interfaces/exam_proctoring_interfaces_s__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[36.072112] (-) TimerEvent: {}
+[36.177296] (exam_proctoring_interfaces) StdoutLine: {'line': b'[100%] Built target exam_proctoring_interfaces_s__rosidl_typesupport_introspection_c\n'}
+[36.177567] (-) TimerEvent: {}
+[36.235027] (exam_proctoring_interfaces) CommandEnded: {'returncode': 0}
+[36.236933] (exam_proctoring_interfaces) JobProgress: {'identifier': 'exam_proctoring_interfaces', 'progress': 'install'}
+[36.277595] (exam_proctoring_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/build/exam_proctoring_interfaces'], 'cwd': '/home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/build/exam_proctoring_interfaces', 'env': OrderedDict({'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'XDG_ACTIVATION_TOKEN': 'gnome-shell/Terminator/2702-2-menna-ThinkPad-P50_TIME134378', 'USER': 'menna', 'LC_TIME': 'ar_EG.UTF-8', 'XDG_SESSION_TYPE': 'x11', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/menna', 'DESKTOP_SESSION': 'ubuntu', 'GIO_LAUNCHED_DESKTOP_FILE': '/usr/share/applications/terminator.desktop', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'PS1': '${debian_chroot:+($debian_chroot)}\\[\\033[01;32m\\]\\u@\\h\\[\\033[00m\\]:\\[\\033[01;34m\\]\\w\\[\\033[00m\\]\\$', 'LC_MONETARY': 'ar_EG.UTF-8', 'MANAGERPID': '2199', 'SYSTEMD_EXEC_PID': '2702', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'TERMINATOR_DBUS_NAME': 'net.tenshu.Terminator23558193cd9818af7fe4d2c2f5bd9d00f', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '3664', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'COLCON_PREFIX_PATH': '/home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'menna', 'JOURNAL_STREAM': '8:18084', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@x11.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'menna', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'WINDOWPATH': '2', 'PATH': '/opt/ros/jazzy/bin:/usr/lib/ccache:/home/menna/ardupilot/Tools/autotest:/opt/gcc-arm-none-eabi-10-2020-q4-major/bin:/home/menna/venv-ardupilot/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/menna-ThinkPad-P50:@/tmp/.ICE-unix/2663,unix/menna-ThinkPad-P50:/tmp/.ICE-unix/2663', 'INVOCATION_ID': 'e5f594bf81c24e7092cb8ea41cd1efa8', 'GTK3_MODULES': 'xapp-gtk3-module', 'XDG_MENU_PREFIX': 'gnome-', 'LC_ADDRESS': 'ar_EG.UTF-8', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':1', 'TERMINATOR_DBUS_PATH': '/net/tenshu/Terminator2', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'LC_TELEPHONE': 'ar_EG.UTF-8', 'VIRTUAL_ENV_PROMPT': '(venv-ardupilot)', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_pkg:/home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LC_NAME': 'ar_EG.UTF-8', 'TERMINATOR_UUID': 'urn:uuid:684d1524-aab0-4cdf-9458-d06a665c7183', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LC_MEASUREMENT': 'ar_EG.UTF-8', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'GJS_DEBUG_OUTPUT': 'stderr', 'LC_IDENTIFICATION': 'ar_EG.UTF-8', 'VIRTUAL_ENV': '/home/menna/venv-ardupilot', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/build/exam_proctoring_interfaces', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_pkg/lib/python3.12/site-packages:/home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages:/home/menna/Depth-Anything-V2', 'LC_NUMERIC': 'ar_EG.UTF-8', 'LC_PAPER': 'ar_EG.UTF-8', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_pkg:/opt/ros/jazzy'}), 'shell': False}
+[36.279094] (-) TimerEvent: {}
+[36.302157] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[36.302650] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/share/ament_index/resource_index/rosidl_interfaces/exam_proctoring_interfaces\n'}
+[36.303670] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/share/exam_proctoring_interfaces/action/Alert.json\n'}
+[36.304561] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/include/exam_proctoring_interfaces/exam_proctoring_interfaces\n'}
+[36.305275] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/include/exam_proctoring_interfaces/exam_proctoring_interfaces/msg\n'}
+[36.305872] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/include/exam_proctoring_interfaces/exam_proctoring_interfaces/msg/rosidl_generator_c__visibility_control.h\n'}
+[36.306585] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/include/exam_proctoring_interfaces/exam_proctoring_interfaces/action\n'}
+[36.307306] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/include/exam_proctoring_interfaces/exam_proctoring_interfaces/action/alert.h\n'}
+[36.308028] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/include/exam_proctoring_interfaces/exam_proctoring_interfaces/action/detail\n'}
+[36.308660] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/include/exam_proctoring_interfaces/exam_proctoring_interfaces/action/detail/alert__functions.h\n'}
+[36.309539] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/include/exam_proctoring_interfaces/exam_proctoring_interfaces/action/detail/alert__type_support.c\n'}
+[36.310234] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/include/exam_proctoring_interfaces/exam_proctoring_interfaces/action/detail/alert__functions.c\n'}
+[36.311059] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/include/exam_proctoring_interfaces/exam_proctoring_interfaces/action/detail/alert__description.c\n'}
+[36.311898] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/include/exam_proctoring_interfaces/exam_proctoring_interfaces/action/detail/alert__struct.h\n'}
+[36.312609] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/include/exam_proctoring_interfaces/exam_proctoring_interfaces/action/detail/alert__type_support.h\n'}
+[36.313511] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/share/exam_proctoring_interfaces/environment/library_path.sh\n'}
+[36.314286] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/share/exam_proctoring_interfaces/environment/library_path.dsv\n'}
+[36.315155] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/lib/libexam_proctoring_interfaces__rosidl_generator_c.so\n'}
+[36.316797] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/lib/libexam_proctoring_interfaces__rosidl_generator_c.so" to ""\n'}
+[36.317364] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/include/exam_proctoring_interfaces/exam_proctoring_interfaces\n'}
+[36.317844] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/include/exam_proctoring_interfaces/exam_proctoring_interfaces/msg\n'}
+[36.318287] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/include/exam_proctoring_interfaces/exam_proctoring_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[36.318962] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/include/exam_proctoring_interfaces/exam_proctoring_interfaces/action\n'}
+[36.319417] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/include/exam_proctoring_interfaces/exam_proctoring_interfaces/action/detail\n'}
+[36.319837] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/include/exam_proctoring_interfaces/exam_proctoring_interfaces/action/detail/alert__rosidl_typesupport_fastrtps_c.h\n'}
+[36.320636] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/lib/libexam_proctoring_interfaces__rosidl_typesupport_fastrtps_c.so\n'}
+[36.322233] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/lib/libexam_proctoring_interfaces__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[36.322715] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/include/exam_proctoring_interfaces/exam_proctoring_interfaces\n'}
+[36.323304] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/include/exam_proctoring_interfaces/exam_proctoring_interfaces/msg\n'}
+[36.323592] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/include/exam_proctoring_interfaces/exam_proctoring_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[36.324190] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/include/exam_proctoring_interfaces/exam_proctoring_interfaces/action\n'}
+[36.324762] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/include/exam_proctoring_interfaces/exam_proctoring_interfaces/action/detail\n'}
+[36.325021] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/include/exam_proctoring_interfaces/exam_proctoring_interfaces/action/detail/alert__type_support.c\n'}
+[36.325877] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/include/exam_proctoring_interfaces/exam_proctoring_interfaces/action/detail/alert__rosidl_typesupport_introspection_c.h\n'}
+[36.326751] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/lib/libexam_proctoring_interfaces__rosidl_typesupport_introspection_c.so\n'}
+[36.329233] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/lib/libexam_proctoring_interfaces__rosidl_typesupport_introspection_c.so" to ""\n'}
+[36.329467] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/lib/libexam_proctoring_interfaces__rosidl_typesupport_c.so\n'}
+[36.330164] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/lib/libexam_proctoring_interfaces__rosidl_typesupport_c.so" to ""\n'}
+[36.330490] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/include/exam_proctoring_interfaces/exam_proctoring_interfaces\n'}
+[36.330912] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/include/exam_proctoring_interfaces/exam_proctoring_interfaces/msg\n'}
+[36.331326] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/include/exam_proctoring_interfaces/exam_proctoring_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[36.331987] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/include/exam_proctoring_interfaces/exam_proctoring_interfaces/action\n'}
+[36.332430] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/include/exam_proctoring_interfaces/exam_proctoring_interfaces/action/detail\n'}
+[36.332904] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/include/exam_proctoring_interfaces/exam_proctoring_interfaces/action/detail/alert__builder.hpp\n'}
+[36.333545] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/include/exam_proctoring_interfaces/exam_proctoring_interfaces/action/detail/alert__type_support.hpp\n'}
+[36.334223] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/include/exam_proctoring_interfaces/exam_proctoring_interfaces/action/detail/alert__struct.hpp\n'}
+[36.334916] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/include/exam_proctoring_interfaces/exam_proctoring_interfaces/action/detail/alert__traits.hpp\n'}
+[36.335626] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/include/exam_proctoring_interfaces/exam_proctoring_interfaces/action/alert.hpp\n'}
+[36.336394] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/include/exam_proctoring_interfaces/exam_proctoring_interfaces\n'}
+[36.336887] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/include/exam_proctoring_interfaces/exam_proctoring_interfaces/msg\n'}
+[36.337368] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/include/exam_proctoring_interfaces/exam_proctoring_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[36.338007] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/include/exam_proctoring_interfaces/exam_proctoring_interfaces/action\n'}
+[36.338533] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/include/exam_proctoring_interfaces/exam_proctoring_interfaces/action/detail\n'}
+[36.339149] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/include/exam_proctoring_interfaces/exam_proctoring_interfaces/action/detail/alert__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[36.340065] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/include/exam_proctoring_interfaces/exam_proctoring_interfaces/action/detail/dds_fastrtps\n'}
+[36.340910] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/lib/libexam_proctoring_interfaces__rosidl_typesupport_fastrtps_cpp.so\n'}
+[36.342817] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/lib/libexam_proctoring_interfaces__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[36.343660] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/include/exam_proctoring_interfaces/exam_proctoring_interfaces\n'}
+[36.344616] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/include/exam_proctoring_interfaces/exam_proctoring_interfaces/action\n'}
+[36.345071] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/include/exam_proctoring_interfaces/exam_proctoring_interfaces/action/detail\n'}
+[36.345673] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/include/exam_proctoring_interfaces/exam_proctoring_interfaces/action/detail/alert__rosidl_typesupport_introspection_cpp.hpp\n'}
+[36.346459] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/include/exam_proctoring_interfaces/exam_proctoring_interfaces/action/detail/alert__type_support.cpp\n'}
+[36.347478] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/lib/libexam_proctoring_interfaces__rosidl_typesupport_introspection_cpp.so\n'}
+[36.349965] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/lib/libexam_proctoring_interfaces__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[36.350822] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/lib/libexam_proctoring_interfaces__rosidl_typesupport_cpp.so\n'}
+[36.352824] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/lib/libexam_proctoring_interfaces__rosidl_typesupport_cpp.so" to ""\n'}
+[36.353426] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/share/exam_proctoring_interfaces/environment/pythonpath.sh\n'}
+[36.356398] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/share/exam_proctoring_interfaces/environment/pythonpath.dsv\n'}
+[36.356712] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/lib/python3.12/site-packages/exam_proctoring_interfaces-0.0.0-py3.12.egg-info\n'}
+[36.356900] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/lib/python3.12/site-packages/exam_proctoring_interfaces-0.0.0-py3.12.egg-info/SOURCES.txt\n'}
+[36.357112] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/lib/python3.12/site-packages/exam_proctoring_interfaces-0.0.0-py3.12.egg-info/top_level.txt\n'}
+[36.357323] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/lib/python3.12/site-packages/exam_proctoring_interfaces-0.0.0-py3.12.egg-info/dependency_links.txt\n'}
+[36.357528] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/lib/python3.12/site-packages/exam_proctoring_interfaces-0.0.0-py3.12.egg-info/PKG-INFO\n'}
+[36.358744] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/lib/python3.12/site-packages/exam_proctoring_interfaces\n'}
+[36.359073] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/lib/python3.12/site-packages/exam_proctoring_interfaces/exam_proctoring_interfaces_s__rosidl_typesupport_fastrtps_c.so\n'}
+[36.359423] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/lib/python3.12/site-packages/exam_proctoring_interfaces/_exam_proctoring_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[36.360292] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/lib/python3.12/site-packages/exam_proctoring_interfaces/exam_proctoring_interfaces_s__rosidl_typesupport_introspection_c.so\n'}
+[36.361150] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/lib/python3.12/site-packages/exam_proctoring_interfaces/__init__.py\n'}
+[36.361888] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/lib/python3.12/site-packages/exam_proctoring_interfaces/exam_proctoring_interfaces_s__rosidl_typesupport_c.so\n'}
+[36.362736] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/lib/python3.12/site-packages/exam_proctoring_interfaces/_exam_proctoring_interfaces_s.ep.rosidl_typesupport_c.c\n'}
+[36.363835] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/lib/python3.12/site-packages/exam_proctoring_interfaces/action\n'}
+[36.364868] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/lib/python3.12/site-packages/exam_proctoring_interfaces/action/_alert_s.c\n'}
+[36.367229] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/lib/python3.12/site-packages/exam_proctoring_interfaces/action/__init__.py\n'}
+[36.367604] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/lib/python3.12/site-packages/exam_proctoring_interfaces/action/_alert.py\n'}
+[36.370086] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/lib/python3.12/site-packages/exam_proctoring_interfaces/_exam_proctoring_interfaces_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[36.380202] (-) TimerEvent: {}
+[36.483185] (-) TimerEvent: {}
+[36.532652] (exam_proctoring_interfaces) StdoutLine: {'line': b"Listing '/home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/lib/python3.12/site-packages/exam_proctoring_interfaces'...\n"}
+[36.532973] (exam_proctoring_interfaces) StdoutLine: {'line': b"Compiling '/home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/lib/python3.12/site-packages/exam_proctoring_interfaces/__init__.py'...\n"}
+[36.533415] (exam_proctoring_interfaces) StdoutLine: {'line': b"Listing '/home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/lib/python3.12/site-packages/exam_proctoring_interfaces/action'...\n"}
+[36.533842] (exam_proctoring_interfaces) StdoutLine: {'line': b"Compiling '/home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/lib/python3.12/site-packages/exam_proctoring_interfaces/action/__init__.py'...\n"}
+[36.534066] (exam_proctoring_interfaces) StdoutLine: {'line': b"Compiling '/home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/lib/python3.12/site-packages/exam_proctoring_interfaces/action/_alert.py'...\n"}
+[36.577053] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/lib/python3.12/site-packages/exam_proctoring_interfaces/exam_proctoring_interfaces_s__rosidl_typesupport_fastrtps_c.so\n'}
+[36.577404] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/lib/python3.12/site-packages/exam_proctoring_interfaces/exam_proctoring_interfaces_s__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[36.577603] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/lib/python3.12/site-packages/exam_proctoring_interfaces/exam_proctoring_interfaces_s__rosidl_typesupport_introspection_c.so\n'}
+[36.587215] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/lib/python3.12/site-packages/exam_proctoring_interfaces/exam_proctoring_interfaces_s__rosidl_typesupport_introspection_c.so" to ""\n'}
+[36.587667] (-) TimerEvent: {}
+[36.587914] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/lib/python3.12/site-packages/exam_proctoring_interfaces/exam_proctoring_interfaces_s__rosidl_typesupport_c.so\n'}
+[36.588163] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/lib/python3.12/site-packages/exam_proctoring_interfaces/exam_proctoring_interfaces_s__rosidl_typesupport_c.so" to ""\n'}
+[36.588368] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/lib/libexam_proctoring_interfaces__rosidl_generator_py.so\n'}
+[36.592198] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/lib/libexam_proctoring_interfaces__rosidl_generator_py.so" to ""\n'}
+[36.598183] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/share/exam_proctoring_interfaces/action/Alert.idl\n'}
+[36.598502] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/share/exam_proctoring_interfaces/action/Alert.action\n'}
+[36.598686] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/share/ament_index/resource_index/package_run_dependencies/exam_proctoring_interfaces\n'}
+[36.598857] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/share/ament_index/resource_index/parent_prefix_path/exam_proctoring_interfaces\n'}
+[36.601013] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/share/exam_proctoring_interfaces/environment/ament_prefix_path.sh\n'}
+[36.602162] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/share/exam_proctoring_interfaces/environment/ament_prefix_path.dsv\n'}
+[36.602960] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/share/exam_proctoring_interfaces/environment/path.sh\n'}
+[36.603963] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/share/exam_proctoring_interfaces/environment/path.dsv\n'}
+[36.604192] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/share/exam_proctoring_interfaces/local_setup.bash\n'}
+[36.605243] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/share/exam_proctoring_interfaces/local_setup.sh\n'}
+[36.607165] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/share/exam_proctoring_interfaces/local_setup.zsh\n'}
+[36.607606] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/share/exam_proctoring_interfaces/local_setup.dsv\n'}
+[36.608013] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/share/exam_proctoring_interfaces/package.dsv\n'}
+[36.608923] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/share/ament_index/resource_index/packages/exam_proctoring_interfaces\n'}
+[36.609303] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/share/exam_proctoring_interfaces/cmake/export_exam_proctoring_interfaces__rosidl_generator_cExport.cmake\n'}
+[36.611159] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/share/exam_proctoring_interfaces/cmake/export_exam_proctoring_interfaces__rosidl_generator_cExport-noconfig.cmake\n'}
+[36.611752] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/share/exam_proctoring_interfaces/cmake/export_exam_proctoring_interfaces__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[36.612287] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/share/exam_proctoring_interfaces/cmake/export_exam_proctoring_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[36.613940] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/share/exam_proctoring_interfaces/cmake/exam_proctoring_interfaces__rosidl_typesupport_introspection_cExport.cmake\n'}
+[36.614404] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/share/exam_proctoring_interfaces/cmake/exam_proctoring_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[36.615917] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/share/exam_proctoring_interfaces/cmake/exam_proctoring_interfaces__rosidl_typesupport_cExport.cmake\n'}
+[36.616267] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/share/exam_proctoring_interfaces/cmake/exam_proctoring_interfaces__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[36.616563] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/share/exam_proctoring_interfaces/cmake/export_exam_proctoring_interfaces__rosidl_generator_cppExport.cmake\n'}
+[36.619519] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/share/exam_proctoring_interfaces/cmake/export_exam_proctoring_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[36.619849] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/share/exam_proctoring_interfaces/cmake/export_exam_proctoring_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[36.620067] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/share/exam_proctoring_interfaces/cmake/exam_proctoring_interfaces__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[36.622216] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/share/exam_proctoring_interfaces/cmake/exam_proctoring_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[36.624338] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/share/exam_proctoring_interfaces/cmake/exam_proctoring_interfaces__rosidl_typesupport_cppExport.cmake\n'}
+[36.624641] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/share/exam_proctoring_interfaces/cmake/exam_proctoring_interfaces__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[36.624839] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/share/exam_proctoring_interfaces/cmake/export_exam_proctoring_interfaces__rosidl_generator_pyExport.cmake\n'}
+[36.625021] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/share/exam_proctoring_interfaces/cmake/export_exam_proctoring_interfaces__rosidl_generator_pyExport-noconfig.cmake\n'}
+[36.625227] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/share/exam_proctoring_interfaces/cmake/rosidl_cmake-extras.cmake\n'}
+[36.628835] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/share/exam_proctoring_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[36.629039] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/share/exam_proctoring_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[36.629251] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/share/exam_proctoring_interfaces/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[36.629436] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/share/exam_proctoring_interfaces/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[36.629610] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/share/exam_proctoring_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[36.629790] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/share/exam_proctoring_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[36.629957] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/share/exam_proctoring_interfaces/cmake/exam_proctoring_interfacesConfig.cmake\n'}
+[36.630369] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/share/exam_proctoring_interfaces/cmake/exam_proctoring_interfacesConfig-version.cmake\n'}
+[36.630587] (exam_proctoring_interfaces) StdoutLine: {'line': b'-- Installing: /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_interfaces/share/exam_proctoring_interfaces/package.xml\n'}
+[36.659227] (exam_proctoring_interfaces) CommandEnded: {'returncode': 0}
+[36.688242] (-) TimerEvent: {}
+[36.714347] (exam_proctoring_interfaces) JobEnded: {'identifier': 'exam_proctoring_interfaces', 'rc': 0}
+[36.715296] (-) EventReactorShutdown: {}

@@ -29,6 +29,7 @@ setup(
             'depth_estimator    = exam_proctoring_pkg.depth_estimator:main',
             'behavior_node = exam_proctoring_pkg.behavior_node:main',
             'rule_node = exam_proctoring_pkg.rule_node:main',
+            'alert_action       = exam_proctoring_pkg.alert_action:main',
 
         ],
     },

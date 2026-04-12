@@ -1,0 +1,10 @@
+# Goal
+int32 alert_level
+string message
+---
+# Result
+bool success
+string response
+---
+# Feedback
+string status

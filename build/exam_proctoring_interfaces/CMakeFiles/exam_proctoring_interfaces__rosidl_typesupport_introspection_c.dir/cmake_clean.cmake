@@ -1,0 +1,13 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/exam_proctoring_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/exam_proctoring_interfaces/action/detail/alert__type_support.c.o"
+  "CMakeFiles/exam_proctoring_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/exam_proctoring_interfaces/action/detail/alert__type_support.c.o.d"
+  "libexam_proctoring_interfaces__rosidl_typesupport_introspection_c.pdb"
+  "libexam_proctoring_interfaces__rosidl_typesupport_introspection_c.so"
+  "rosidl_typesupport_introspection_c/exam_proctoring_interfaces/action/detail/alert__rosidl_typesupport_introspection_c.h"
+  "rosidl_typesupport_introspection_c/exam_proctoring_interfaces/action/detail/alert__type_support.c"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang C)
+  include(CMakeFiles/exam_proctoring_interfaces__rosidl_typesupport_introspection_c.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()
