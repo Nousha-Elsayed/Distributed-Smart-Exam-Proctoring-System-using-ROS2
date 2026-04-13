@@ -2,192 +2,146 @@
 
 import rclpy
 from rclpy.node import Node
+
 from sensor_msgs.msg import Image
 from std_msgs.msg import String
+
 from cv_bridge import CvBridge
 import cv2
 import json
-import numpy as np
 import time
+import os
 
-try:
-    from ultralytics import YOLO
-    YOLO_AVAILABLE = True
-except ImportError:
-    YOLO_AVAILABLE = False
-    print("[WARNING] Ultralytics YOLO not installed")
+from ultralytics import YOLO
+from ament_index_python.packages import get_package_share_directory
 
 
 class ObjectDetectionNode(Node):
+
     def __init__(self):
         super().__init__('object_detection_node')
 
-        # Parameters
-        self.declare_parameter('confidence_threshold', 0.5)
-        self.declare_parameter('model_path', 'yolov8n.pt')
-        self.declare_parameter('device', 'cpu')
-        self.declare_parameter('frame_skip', 4)
-        self.declare_parameter('prohibited_classes', 'phone,book,laptop,tablet')
+        # ===== PARAMETERS =====
+        self.declare_parameter('confidence_threshold', 0.3)
+        self.conf_threshold = self.get_parameter('confidence_threshold').value
 
-        self.confidence_threshold = self.get_parameter('confidence_threshold').value
-        model_path = self.get_parameter('model_path').value
-        self.device = self.get_parameter('device').value
-        self.frame_skip = self.get_parameter('frame_skip').value
+        # ===== PATH TO MODEL (ROS2 WAY) =====
+        pkg_share = get_package_share_directory('exam_proctoring_pkg')
+        yolo_path = os.path.join(pkg_share, 'models', 'yolo', 'yolov8n.pt')
 
-        prohibited_str = self.get_parameter('prohibited_classes').value
-        self.prohibited_classes = [c.strip() for c in prohibited_str.split(',')]
+        self.get_logger().info(f"Loading YOLO model from: {yolo_path}")
 
-        self.get_logger().info('=' * 50)
-        self.get_logger().info('Object Detection Node Initializing')
-        self.get_logger().info(f'Confidence threshold: {self.confidence_threshold}')
-        self.get_logger().info(f'Prohibited classes: {self.prohibited_classes}')
-        self.get_logger().info(f'Device: {self.device}')
-        self.get_logger().info('=' * 50)
+        # ===== YOLO MODEL =====
+        self.model = YOLO(yolo_path)
 
-        # Load YOLO
-        self.model = None
-        if YOLO_AVAILABLE:
-            try:
-                self.model = YOLO(model_path)
-                self.model.to(self.device)
-                self.get_logger().info(f'YOLO model loaded from {model_path}')
-            except Exception as e:
-                self.get_logger().error(f'Failed to load YOLO model: {e}')
-        else:
-            self.get_logger().warn('YOLO not available - demo mode')
-
-        # COCO classes
-        self.coco_classes = {
-            63: 'laptop', 67: 'cell phone', 73: 'book',
-            26: 'handbag', 24: 'backpack', 39: 'bottle'
-        }
-
+        # ===== CV BRIDGE =====
         self.bridge = CvBridge()
 
+        # ===== SUBSCRIBER =====
         self.subscription = self.create_subscription(
-            Image, '/camera_frames', self.image_callback, 10
+            Image,
+            '/camera_frames',
+            self.image_callback,
+            10
         )
 
+        # ===== PUBLISHER =====
         self.publisher = self.create_publisher(
-            String, '/object_data', 10
+            String,
+            '/object_data',
+            10
         )
 
-        self.frame_count = 0
-        self.processing_times = []
+        # ===== FPS =====
+        self.prev_time = time.time()
 
-        self.get_logger().info('🚀 Object Detection Node READY')
+        # ===== WINDOW =====
+        cv2.namedWindow("Object Detection", cv2.WINDOW_NORMAL)
+
+        self.get_logger().info("🚀 Object Detection Node Started")
 
     def image_callback(self, msg):
-        self.frame_count += 1
 
-        # Frame skipping
-        if self.frame_count % (self.frame_skip + 1) != 0:
+        # ===== CONVERT IMAGE =====
+        try:
+            frame = self.bridge.imgmsg_to_cv2(msg, desired_encoding='bgr8')
+        except Exception as e:
+            self.get_logger().error(f"CV Bridge Error: {e}")
             return
 
-        start_time = time.time()
+        # ===== YOLO INFERENCE =====
+        results = self.model(frame, verbose=False)[0]
 
-        try:
-            frame = self.bridge.imgmsg_to_cv2(msg, 'bgr8')
-            h, w = frame.shape[:2]
+        detected_objects = []
 
-            result = {
-                'violation_detected': False,
-                'prohibited_objects': [],
-                'object_count': 0,
-                'objects': [],
-                'timestamp': self.get_clock().now().to_msg().sec
-            }
+        # ===== DRAW RESULTS =====
+        for box in results.boxes:
+            conf = float(box.conf[0])
 
-            if self.model is not None:
+            if conf < self.conf_threshold:
+                continue
 
-                # 🔥 KEY FIX: use smaller image
-                small_frame = cv2.resize(frame, (256, 192))
+            cls_id = int(box.cls[0])
+            label = self.model.names[cls_id]
 
-                # scale factors
-                scale_x = w / 256
-                scale_y = h / 192
+            x1, y1, x2, y2 = map(int, box.xyxy[0])
 
-                results = self.model(
-                    small_frame,
-                    conf=self.confidence_threshold,
-                    verbose=False
-                )
+            # draw box
+            cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 255, 0), 2)
+            cv2.putText(frame, f"{label} {conf:.2f}",
+                        (x1, y1 - 10),
+                        cv2.FONT_HERSHEY_SIMPLEX,
+                        0.6,
+                        (0, 255, 0),
+                        2)
 
-                for r in results:
-                    if r.boxes is None:
-                        continue
+            # filter exam objects
+            if label in ["cell phone", "book"]:
+                detected_objects.append({
+                    "label": label,
+                    "confidence": conf,
+                    "bbox": [x1, y1, x2, y2]
+                })
 
-                    for box in r.boxes:
-                        class_id = int(box.cls[0])
-                        confidence = float(box.conf[0])
-                        class_name = self.coco_classes.get(class_id, 'unknown')
+        # ===== FPS =====
+        current_time = time.time()
+        fps = 1.0 / (current_time - self.prev_time)
+        self.prev_time = current_time
 
-                        x1, y1, x2, y2 = box.xyxy[0].tolist()
+        cv2.putText(frame, f"FPS: {fps:.2f}", (20, 40),
+                    cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0), 2)
 
-                        # 🔥 scale back to original size
-                        x1 *= scale_x
-                        x2 *= scale_x
-                        y1 *= scale_y
-                        y2 *= scale_y
+        cv2.putText(frame, "YOLO Object Detection", (20, 80),
+                    cv2.FONT_HERSHEY_SIMPLEX, 0.8, (255, 255, 0), 2)
 
-                        width = x2 - x1
-                        height = y2 - y1
+        # ===== SHOW WINDOW =====
+        cv2.imshow("Object Detection", frame)
+        cv2.waitKey(1)
 
-                        obj = {
-                            'class_id': class_id,
-                            'class_name': class_name,
-                            'confidence': confidence,
-                            'bbox': {
-                                'x': int(x1),
-                                'y': int(y1),
-                                'width': int(width),
-                                'height': int(height)
-                            }
-                        }
+        # ===== PUBLISH =====
+        msg_out = String()
+        msg_out.data = json.dumps({
+            "objects": detected_objects,
+            "fps": fps
+        })
 
-                        result['objects'].append(obj)
-                        result['object_count'] += 1
+        self.publisher.publish(msg_out)
 
-                        if class_name in self.prohibited_classes:
-                            result['violation_detected'] = True
-                            result['prohibited_objects'].append(obj)
-
-                            self.get_logger().info(
-                                f'🚨 {class_name} detected ({confidence:.2f})'
-                            )
-
-            # Publish
-            msg_out = String()
-            msg_out.data = json.dumps(result)
-            self.publisher.publish(msg_out)
-
-            # FPS
-            processing_time = time.time() - start_time
-            self.processing_times.append(processing_time)
-
-            if len(self.processing_times) > 30:
-                self.processing_times.pop(0)
-
-            avg_time = sum(self.processing_times) / len(self.processing_times)
-            fps = 1.0 / avg_time if avg_time > 0 else 0
-
-            if fps < 4.8 and self.frame_count > 30:
-                self.get_logger().warn(f'FPS low: {fps:.2f}')
-
-        except Exception as e:
-            self.get_logger().error(f'Error: {e}')
+        self.get_logger().info(f"Detected: {len(detected_objects)} objects")
 
 
-def main():
-    rclpy.init()
+def main(args=None):
+    rclpy.init(args=args)
+
     node = ObjectDetectionNode()
+
     try:
         rclpy.spin(node)
     except KeyboardInterrupt:
         pass
-    finally:
-        node.destroy_node()
-        rclpy.shutdown()
+
+    node.destroy_node()
+    rclpy.shutdown()
 
 
 if __name__ == '__main__':

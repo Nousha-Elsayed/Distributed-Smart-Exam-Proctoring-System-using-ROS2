@@ -1,4 +1,0 @@
-source;share/exam_proctoring_interfaces/local_setup.bash
-source;share/exam_proctoring_interfaces/local_setup.dsv
-source;share/exam_proctoring_interfaces/local_setup.sh
-source;share/exam_proctoring_interfaces/local_setup.zsh

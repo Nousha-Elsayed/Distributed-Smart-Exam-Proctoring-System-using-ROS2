@@ -1,6 +1,0 @@
-{
-  "package_name": "exam_proctoring_interfaces",
-  "non_idl_tuples": [
-    "/home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/src/exam_proctoring_interfaces:action/Alert.action"
-  ]
-}
