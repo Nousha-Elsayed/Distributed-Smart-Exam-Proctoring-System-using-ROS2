@@ -4,11 +4,7 @@ from rclpy.action import ActionServer, ActionClient
 from std_msgs.msg import String
 import json
 import time
-import os
 from exam_proctoring_interfaces.action import Alert   
-
-#additional for testing
-ALERT_LOG_FILE = 'alerts.log'   
 
 
 class AlertActionNode(Node):
@@ -16,23 +12,21 @@ class AlertActionNode(Node):
     def __init__(self):
         super().__init__('alert_action_node')
 
-        #  Parameters 
+        # Parameters 
         self.declare_parameter('alert_level', 'medium')
-        self.declare_parameter('log_to_file', True)
 
         self.alert_level = self.get_parameter('alert_level').value
-        self.log_to_file = self.get_parameter('log_to_file').value
 
         self.alert_counter = 0
 
-        #  Subscriber 
+        # Subscriber 
         self.create_subscription(
             String, '/violation_event', self.violation_callback, 10)
 
-        #  Publisher 
+        # Publisher 
         self.pub_status = self.create_publisher(String, '/alert_status', 10)
 
-        #  Action Server 
+        # Action Server 
         self._action_server = ActionServer(
             self,
             Alert,
@@ -40,20 +34,14 @@ class AlertActionNode(Node):
             execute_callback=self.execute_callback
         )
 
-        #  Action Client 
+        # Action Client 
         self._action_client = ActionClient(self, Alert, '/alert_action')
 
-        #  Init log file 
-        if self.log_to_file:
-            with open(ALERT_LOG_FILE, 'w') as f:
-                f.write('=== Exam Proctoring Alert Log ===\n')
-                f.write(f'Started: {time.strftime("%Y-%m-%d %H:%M:%S")}\n\n')
-
         self.get_logger().info(
-            f'Alert Node running | level={self.alert_level} | log={ALERT_LOG_FILE}'
+            f'Alert Node running | level={self.alert_level}'
         )
 
-    #  VIOLATION CALLBACK 
+    # VIOLATION CALLBACK 
     def violation_callback(self, msg: String):
         try:
             event = json.loads(msg.data)
@@ -67,7 +55,7 @@ class AlertActionNode(Node):
         if event.get('severity', 'low') in ['medium', 'high']:
             self.send_goal(event)
 
-    #   ALERT LOGIC 
+    # ALERT LOGIC 
     def execute_alert(self, event: dict):
         violation_id = event.get('violation_id', self.alert_counter)
         severity     = event.get('severity', 'low')
@@ -85,14 +73,10 @@ class AlertActionNode(Node):
 
         alert_msg += '='*50
 
-        # Print
+        # Print 
         self.get_logger().error(alert_msg)
 
-        # Log to file
-        if self.log_to_file:
-            self._write_to_log(alert_msg)
-
-        # Publish status (important for monitor node)
+        # Publish status
         status = {
             'alert_id': violation_id,
             'level': severity,
@@ -106,7 +90,7 @@ class AlertActionNode(Node):
         msg.data = json.dumps(status)
         self.pub_status.publish(msg)
 
-    #  ACTION CLIENT 
+    # ACTION CLIENT 
     def send_goal(self, event):
         goal_msg = Alert.Goal()
 
@@ -119,16 +103,16 @@ class AlertActionNode(Node):
 
         self.get_logger().info(f"Sent Action Goal for #{goal_msg.violation_id}")
 
-    #  ACTION SERVER 
+    # ACTION SERVER 
     async def execute_callback(self, goal_handle):
-        self.get_logger().info(f" Executing Action for #{goal_handle.request.violation_id}")
+        self.get_logger().info(f"Executing Action for #{goal_handle.request.violation_id}")
 
         feedback_msg = Alert.Feedback()
 
         steps = [
             "Analyzing violation...",
             "Logging event...",
-            " Alert..."
+            "Alert..."
         ]
 
         for i, step in enumerate(steps):
@@ -148,7 +132,7 @@ class AlertActionNode(Node):
 
         return result
 
-    #  ACTION DESCRIPTION 
+    # ACTION DESCRIPTION 
     def _get_action_description(self, level: str) -> str:
         actions = {
             'none':   'No action',
@@ -157,14 +141,6 @@ class AlertActionNode(Node):
             'high':   'Logged + notified + flagged student',
         }
         return actions.get(level, 'Logged warning')
-
-    #  FILE LOG 
-    def _write_to_log(self, message: str):
-        try:
-            with open(ALERT_LOG_FILE, 'a') as f:
-                f.write(message + '\n')
-        except IOError as e:
-            self.get_logger().error(f'Unable to write to log file: {e}')
 
 
 def main(args=None):
