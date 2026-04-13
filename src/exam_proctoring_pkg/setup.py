@@ -37,7 +37,8 @@ setup(
             'behavior_node = exam_proctoring_pkg.behavior_node:main',
             'rule_node = exam_proctoring_pkg.rule_node:main',
             'alert_action       = exam_proctoring_pkg.alert_action:main',
-            'object_detector    = exam_proctoring_pkg.object_detector:main'
+            'object_detector    = exam_proctoring_pkg.object_detector:main',
+            'monitor            = exam_proctoring_pkg.monitor:main'
 
         ],
     },

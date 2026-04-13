@@ -1,21 +1,23 @@
-import rclpy
+#!/usr/bin/env python3
+
+import rclpy            #in ros1 #import rospy
 from rclpy.node import Node
-from sensor_msgs.msg import Image
-from std_msgs.msg import String
-from cv_bridge import CvBridge
+from sensor_msgs.msg import Image   #from the camera
+from std_msgs.msg import String     # to publish json
+from cv_bridge import CvBridge      # bridge between opencv and ros2
 import cv2
 import json
 
-class FaceDetectionNode(Node):
+class FaceDetectionNode(Node):          #class inherit from node 
     def __init__(self):
-        super().__init__('face_detection_node')
+        super().__init__('face_detection_node')         #node constructor # rospy.init_node('face_detection_node')
 
         # Parameters
-        self.declare_parameter('scale_factor', 1.1)
-        self.declare_parameter('min_neighbors', 7)
+        self.declare_parameter('scale_factor', 1.1)         # shrink step 
+        self.declare_parameter('min_neighbors', 7)          # face detection accuracy 
 
         self.scale_factor = self.get_parameter('scale_factor').value
-        self.min_neighbors = self.get_parameter('min_neighbors').value
+        self.min_neighbors = self.get_parameter('min_neighbors').value      #self.scale_factor = rospy.get_param('~scale_factor', 1.1)
 
         # Haar Cascades
         self.face_cascade = cv2.CascadeClassifier(
@@ -25,9 +27,9 @@ class FaceDetectionNode(Node):
             cv2.data.haarcascades + 'haarcascade_eye_tree_eyeglasses.xml'
         )
 
-        self.bridge = CvBridge()
+        self.bridge = CvBridge()        # convert it from ROS format to OpenCV format
 
-        # Subscriber
+        # Subscriber                    # rospy.Subscriber('/camera_frames', Image, self.image_callback)
         self.create_subscription(
             Image,
             '/camera_frames',
@@ -35,27 +37,25 @@ class FaceDetectionNode(Node):
             10
         )
 
-        # Publisher
+        # Publisher                     #rospy.Publisher('/face_data', String, queue_size=10)
         self.publisher = self.create_publisher(String, '/face_data', 10)
 
         self.get_logger().info('Face Detection Node Started')
 
     def is_looking_at_camera(self, gray_face, face_w, face_h):
-        # Improve contrast
-        gray_face = cv2.equalizeHist(gray_face)
-
-        eyes = self.eye_cascade.detectMultiScale(
+        gray_face = cv2.equalizeHist(gray_face)        # Improve contrast
+        eyes = self.eye_cascade.detectMultiScale(       # list of the eye bbox 
             gray_face,
             scaleFactor=1.1,
             minNeighbors=1,
-            minSize=(int(face_w * 0.1), int(face_h * 0.1))
+            minSize=(int(face_w * 0.1), int(face_h * 0.1))      #to filter noises 
         )
 
         if len(eyes) == 0:
             return False
 
         for (ex, ey, ew, eh) in eyes:
-            if ey < face_h * 0.65:
+            if ey < face_h * 0.70:
                 return True
 
         return False
@@ -72,20 +72,20 @@ class FaceDetectionNode(Node):
         )
 
         face_list = []
-        display_frame = frame.copy()
+        display_frame = frame.copy()        #copy the original frame to draw bbox on
 
         for (x, y, fw, fh) in faces:
             face_gray = gray[y:y+fh, x:x+fw]
             face_color = display_frame[y:y+fh, x:x+fw]
 
-            # Looking detection
+            # looking detection
             looking = self.is_looking_at_camera(face_gray, fw, fh)
 
-            # Center check
+            # center check
             face_center_x = x + fw // 2
             in_center = (w * 0.25) < face_center_x < (w * 0.75)
 
-            # Draw rectangle
+            # draw rectangle
             box_color = (0, 255, 0) if looking else (0, 0, 255)
             cv2.rectangle(display_frame, (x, y), (x+fw, y+fh), box_color, 2)
 
@@ -95,7 +95,7 @@ class FaceDetectionNode(Node):
                         cv2.FONT_HERSHEY_SIMPLEX, 0.7,
                         box_color, 2)
 
-            # Draw eyes
+            # draw eyes
             eyes = self.eye_cascade.detectMultiScale(
                 cv2.equalizeHist(face_gray),
                 scaleFactor=1.1,
@@ -110,13 +110,13 @@ class FaceDetectionNode(Node):
             face_list.append({
                 'x1': int(x),
                 'y1': int(y),
-                'x2': int(x + fw),   # FIXED
-                'y2': int(y + fh),   # FIXED
+                'x2': int(x + fw),  
+                'y2': int(y + fh),   
                 'is_looking': looking,
                 'in_center': bool(in_center)
             })
 
-        any_looking = any(f['is_looking'] for f in face_list)
+        any_looking = any(f['is_looking'] for f in face_list)       # returns true
 
         status = f'Faces: {len(face_list)} | Looking: {any_looking}'
         cv2.putText(display_frame, status,
@@ -135,22 +135,22 @@ class FaceDetectionNode(Node):
         }
 
         out_msg = String()
-        out_msg.data = json.dumps(result)
-        self.publisher.publish(out_msg)
+        out_msg.data = json.dumps(result)       # dictionary to a JSON text string
+        self.publisher.publish(out_msg)        
 
-        self.get_logger().info(f'Faces: {len(face_list)} | Looking: {any_looking}')
+        self.get_logger().info(f'Faces: {len(face_list)} | Looking: {any_looking}')     #rospy.loginfo()
 
     def destroy_node(self):
         cv2.destroyAllWindows()
-        super().destroy_node()
+        super().destroy_node()      #rospy.on_shutdown(my_function) # call the parent class cleanup
 
 
 def main(args=None):
-    rclpy.init(args=args)
-    node = FaceDetectionNode()
+    rclpy.init(args=args)           #rospy.init_node('name') #__init__
+    node = FaceDetectionNode()      
 
     try:
-        rclpy.spin(node)
+        rclpy.spin(node)            #rospy.spin()
     except KeyboardInterrupt:
         pass
     finally:

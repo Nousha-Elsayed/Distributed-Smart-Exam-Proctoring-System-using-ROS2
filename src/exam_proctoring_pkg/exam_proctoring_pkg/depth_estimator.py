@@ -3,20 +3,18 @@
 import json
 import numpy as np
 import rclpy
-from rclpy.node import Node
+from rclpy.node import Node         #import rospy
 from sensor_msgs.msg import Image
 from std_msgs.msg import String
 from cv_bridge import CvBridge
 import cv2
-import os
+import os           #build file paths and check if files exist
 import torch
 
-from ament_index_python.packages import get_package_share_directory
+from ament_index_python.packages import get_package_share_directory     #rospkg.RosPack().get_path('package_name')
 import os
 
-# -------------------------
 # DepthAnything import
-# -------------------------
 try:
     from depth_anything_v2.dpt import DepthAnythingV2
     DEPTH_AVAILABLE = True
@@ -28,22 +26,10 @@ except Exception as e:
 class DepthEstimationNode(Node):
 
     def __init__(self):
-        super().__init__('depth_estimation_node')
+        super().__init__('depth_estimation_node')       #rospy.init_node('depth_estimation_node')
 
-        self.bridge = CvBridge()
+        self.bridge = CvBridge()        #CvBridge instance
         self.model = None
-
-        # =====================================================
-        # FIXED MODEL PATH
-        # =====================================================
-        """model_path = "/home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/src/exam_proctoring_pkg/models/depth_anything/depth_anything_v2_vits.pth"
-
-        if not os.path.exists(model_path):
-            self.get_logger().error(f"❌ Model NOT found at: {model_path}")
-            model_path = None
-        else:
-            self.get_logger().info(f"Loading Depth model from: {model_path}")
-        """
 
         pkg_share = get_package_share_directory('exam_proctoring_pkg')
 
@@ -54,28 +40,26 @@ class DepthEstimationNode(Node):
             "depth_anything_v2_vits.pth"
         )
 
-        self.get_logger().info(f"Model path: {model_path}")
+        self.get_logger().info(f"Model path: {model_path}")       #rospy.loginfo(...)
 
         if not os.path.exists(model_path):
-            self.get_logger().error("❌ Model not found in install space. Did you run colcon build?")
+            self.get_logger().error(" Model not found in install space. Did you run colcon build?")
             model_path = None
-        # -------------------------
         # LOAD MODEL
-        # -------------------------
         if DEPTH_AVAILABLE and model_path is not None:
             try:
                 self.model = DepthAnythingV2(
                     encoder='vits',
-                    features=64,
-                    out_channels=[48, 96, 192, 384]
+                    features=64,                        #the internal feature dimension size
+                    out_channels=[48, 96, 192, 384]     #the output channels at each decoder layer
                 )
 
-                checkpoint = torch.load(
+                checkpoint = torch.load(        #reads the .pth
                     model_path,
                     map_location='cpu'
                 )
 
-                if isinstance(checkpoint, dict):
+                if isinstance(checkpoint, dict):        #handle different pytorch models
                     state_dict = (
                         checkpoint.get('state_dict') or
                         checkpoint.get('model') or
@@ -85,21 +69,19 @@ class DepthEstimationNode(Node):
                     state_dict = checkpoint
 
                 self.model.load_state_dict(state_dict, strict=False)
-                self.model.eval()
+                self.model.eval()     #sets the model to evaluation mode
 
-                self.get_logger().info("✅ Depth model loaded successfully")
+                self.get_logger().info(" Depth model loaded successfully")
 
             except Exception as e:
-                self.get_logger().error(f"❌ Model loading failed: {e}")
+                self.get_logger().error(f" Model loading failed: {e}")
                 self.model = None
 
-        # -------------------------
         # ROS IO
-        # -------------------------
-        self.pub_depth_img = self.create_publisher(Image, '/depth_data', 10)
+        self.pub_depth_img = self.create_publisher(Image, '/depth_data', 10)    #rospy.publisher('/depth_data', Image, queue_size=10)
         self.pub_metrics = self.create_publisher(String, '/object_depth', 10)
 
-        self.create_subscription(
+        self.create_subscription(           #rospy.Subscriber('/camera_frames', Image, self.callback)
             Image,
             '/camera_frames',
             self.callback,
@@ -107,11 +89,11 @@ class DepthEstimationNode(Node):
         )
 
         try:
-            cv2.namedWindow("Depth Map", cv2.WINDOW_NORMAL)
+            cv2.namedWindow("Depth Map", cv2.WINDOW_NORMAL) 
         except:
             pass
 
-        self.get_logger().info("🚀 Depth Estimation Node Ready")
+        self.get_logger().info("Depth Estimation Node Ready")
 
     # =========================================================
     def callback(self, msg):
@@ -119,24 +101,21 @@ class DepthEstimationNode(Node):
         try:
             frame = self.bridge.imgmsg_to_cv2(msg, "bgr8")
 
-            # -------------------------
             # DEPTH INFERENCE
-            # -------------------------
             if self.model is not None:
                 inp = cv2.resize(frame, (384, 384))
                 depth_small = self.model.infer_image(inp)
 
                 depth = cv2.resize(
                     depth_small,
-                    (frame.shape[1], frame.shape[0])
+                    (frame.shape[1], frame.shape[0]) # width,height
                 )
             else:
                 h, w = frame.shape[:2]
                 depth = np.random.rand(h, w).astype(np.float32)
 
-            # -------------------------
+            
             # NORMALIZATION
-            # -------------------------
             dmin, dmax = float(depth.min()), float(depth.max())
 
             depth_vis = ((depth - dmin) / (dmax - dmin + 1e-6) * 255).astype(np.uint8)
@@ -149,16 +128,12 @@ class DepthEstimationNode(Node):
             except:
                 pass
 
-            # -------------------------
             # PUBLISH IMAGE
-            # -------------------------
             img_msg = self.bridge.cv2_to_imgmsg(depth_vis, encoding='mono8')
             img_msg.header.stamp = self.get_clock().now().to_msg()
             self.pub_depth_img.publish(img_msg)
 
-            # -------------------------
             # CENTER DEPTH
-            # -------------------------
             h, w = depth.shape
             cx, cy = w // 2, h // 2
 
@@ -179,7 +154,6 @@ class DepthEstimationNode(Node):
             self.get_logger().error(f"Callback error: {e}")
 
 
-# =========================================================
 def main():
     rclpy.init()
     node = DepthEstimationNode()
