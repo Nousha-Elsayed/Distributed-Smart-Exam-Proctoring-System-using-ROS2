@@ -1,0 +1,30 @@
+[3.901s] Invoking command in '/home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/src/exam_proctoring_pkg': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ PYTHONPATH=/home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/build/exam_proctoring_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_pkg/lib/python3.12/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(venv-ardupilot) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/exam_proctoring_pkg build --build-base /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/build/exam_proctoring_pkg/build install --record /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/build/exam_proctoring_pkg/install.log --single-version-externally-managed install_data
+[5.077s] running egg_info
+[5.173s] writing ../../build/exam_proctoring_pkg/exam_proctoring_pkg.egg-info/PKG-INFO
+[5.174s] writing dependency_links to ../../build/exam_proctoring_pkg/exam_proctoring_pkg.egg-info/dependency_links.txt
+[5.175s] writing entry points to ../../build/exam_proctoring_pkg/exam_proctoring_pkg.egg-info/entry_points.txt
+[5.175s] writing requirements to ../../build/exam_proctoring_pkg/exam_proctoring_pkg.egg-info/requires.txt
+[5.176s] writing top-level names to ../../build/exam_proctoring_pkg/exam_proctoring_pkg.egg-info/top_level.txt
+[5.368s] reading manifest file '../../build/exam_proctoring_pkg/exam_proctoring_pkg.egg-info/SOURCES.txt'
+[5.371s] writing manifest file '../../build/exam_proctoring_pkg/exam_proctoring_pkg.egg-info/SOURCES.txt'
+[5.372s] running build
+[5.372s] running build_py
+[5.373s] copying exam_proctoring_pkg/object_detector.py -> /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/build/exam_proctoring_pkg/build/lib/exam_proctoring_pkg
+[5.374s] running install
+[5.396s] running install_lib
+[5.491s] copying /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/build/exam_proctoring_pkg/build/lib/exam_proctoring_pkg/object_detector.py -> /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_pkg/lib/python3.12/site-packages/exam_proctoring_pkg
+[5.493s] byte-compiling /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_pkg/lib/python3.12/site-packages/exam_proctoring_pkg/object_detector.py to object_detector.cpython-312.pyc
+[5.500s] running install_data
+[5.501s] running install_egg_info
+[5.602s] removing '/home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_pkg/lib/python3.12/site-packages/exam_proctoring_pkg-0.0.0-py3.12.egg-info' (and everything under it)
+[5.603s] Copying ../../build/exam_proctoring_pkg/exam_proctoring_pkg.egg-info to /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_pkg/lib/python3.12/site-packages/exam_proctoring_pkg-0.0.0-py3.12.egg-info
+[5.607s] running install_scripts
+[6.224s] Installing alert_action script to /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_pkg/lib/exam_proctoring_pkg
+[6.225s] Installing behavior_node script to /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_pkg/lib/exam_proctoring_pkg
+[6.226s] Installing camera_streamer script to /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_pkg/lib/exam_proctoring_pkg
+[6.226s] Installing depth_estimator script to /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_pkg/lib/exam_proctoring_pkg
+[6.227s] Installing face_detector script to /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_pkg/lib/exam_proctoring_pkg
+[6.227s] Installing object_detector script to /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_pkg/lib/exam_proctoring_pkg
+[6.228s] Installing rule_node script to /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_pkg/lib/exam_proctoring_pkg
+[6.229s] writing list of installed files to '/home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/build/exam_proctoring_pkg/install.log'
+[6.310s] Invoked command in '/home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/src/exam_proctoring_pkg' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ PYTHONPATH=/home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/build/exam_proctoring_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/install/exam_proctoring_pkg/lib/python3.12/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(venv-ardupilot) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/exam_proctoring_pkg build --build-base /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/build/exam_proctoring_pkg/build install --record /home/menna/Distributed-Smart-Exam-Proctoring-System-using-ROS2/build/exam_proctoring_pkg/install.log --single-version-externally-managed install_data

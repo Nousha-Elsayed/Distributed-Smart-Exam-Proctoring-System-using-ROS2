@@ -4,4 +4,5 @@ behavior_node = exam_proctoring_pkg.behavior_node:main
 camera_streamer = exam_proctoring_pkg.camera_streamer:main
 depth_estimator = exam_proctoring_pkg.depth_estimator:main
 face_detector = exam_proctoring_pkg.face_detector:main
+object_detector = exam_proctoring_pkg.object_detector:main
 rule_node = exam_proctoring_pkg.rule_node:main

@@ -4,3 +4,5 @@ exam_proctoring_interfaces.egg-info/PKG-INFO
 exam_proctoring_interfaces.egg-info/SOURCES.txt
 exam_proctoring_interfaces.egg-info/dependency_links.txt
 exam_proctoring_interfaces.egg-info/top_level.txt
+exam_proctoring_interfaces/action/__init__.py
+exam_proctoring_interfaces/action/_alert.py

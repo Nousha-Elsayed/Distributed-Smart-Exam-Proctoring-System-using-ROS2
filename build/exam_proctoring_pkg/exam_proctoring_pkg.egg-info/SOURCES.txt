@@ -14,6 +14,7 @@ exam_proctoring_pkg/behavior_node.py
 exam_proctoring_pkg/camera_streamer.py
 exam_proctoring_pkg/depth_estimator.py
 exam_proctoring_pkg/face_detector.py
+exam_proctoring_pkg/object_detector.py
 exam_proctoring_pkg/rule_node.py
 resource/exam_proctoring_pkg
 test/test_copyright.py
