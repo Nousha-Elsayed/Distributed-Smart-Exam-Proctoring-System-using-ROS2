@@ -1,10 +1,14 @@
-# Goal
-int32 alert_level
-string message
+# Goal 
+int32 violation_id
+string severity
+string description
+
 ---
-# Result
+# Result 
 bool success
-string response
+string message
+
 ---
-# Feedback
-string status
+#  Feedback 
+string current_status
+int32 progress
