@@ -5,7 +5,7 @@ from std_msgs.msg import String
 import json
 import time
 import os
-from alert_interfaces.action import Alert   
+from exam_proctoring_interfaces.action import Alert   
 
 #additional for testing
 ALERT_LOG_FILE = 'alerts.log'   
