@@ -63,7 +63,7 @@ class BehaviorAnalysisNode(Node):
         now = time.time()
         behaviors = []
 
-        # ===== Face =====
+        #  Face 
         face_detected = self.latest_face.get('face_detected', False)
         face_count = self.latest_face.get('face_count', 0)
         is_looking = self.latest_face.get('is_looking', True)
@@ -117,7 +117,7 @@ class BehaviorAnalysisNode(Node):
 
             h, w = self.depth_map.shape[:2]
 
-            # Clamp bbox داخل الصورة
+            # Clamp bbox
             x1 = max(0, min(w - 1, int(x1)))
             x2 = max(0, min(w, int(x2)))
             y1 = max(0, min(h - 1, int(y1)))
@@ -128,7 +128,7 @@ class BehaviorAnalysisNode(Node):
             if crop.size > 0:
                 primary_distance = float(np.mean(crop))
 
-                #  FIXED THRESHOLDS (0–255)
+                #   THRESHOLDS (0–255)
                 unusual_distance = (
                     primary_distance < 50 or
                     primary_distance > 200
